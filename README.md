@@ -1,7 +1,6 @@
 ## 01fe21bcs314_s_application2
 
 
-
 ## Description
 
 - This React application is built using [create-react-app](https://create-react-app.dev/).
