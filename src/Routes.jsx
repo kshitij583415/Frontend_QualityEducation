@@ -1,4 +1,5 @@
 import LogIn from "modals/LogIn";
+import SignUp from "modals/SignUp";
 import Allmentors from "pages/Allmentors";
 import EduviCourses from "pages/EduviCourses";
 import EduviCoursesDetails from "pages/EduviCoursesDetails";
@@ -13,6 +14,14 @@ import { useRoutes } from "react-router-dom";
 const ProjectRoutes = () => {
   let element = useRoutes([
     { path: "dhiwise-dashboard", element: <Home /> },
+    {
+      path: "login",
+      element: <LogIn />
+    },
+    {
+      path:"signup",
+      element: <SignUp/>
+    },
     { path: "*", element: <NotFound /> },
 
     {
@@ -43,11 +52,12 @@ const ProjectRoutes = () => {
       path: "singlementordetails",
       element: <Singlementordetails />,
     },
-    {
-      path:"login",
-      element:<LogIn/>
-    }
-   
+    // {
+    //   path: "signup",
+    //   element: <Si
+    // }
+
+
   ]);
 
   return element;

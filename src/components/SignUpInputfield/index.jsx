@@ -16,7 +16,7 @@ export default function SignUpInputfield({ email = "Email", ...props }) {
         size="xs"
         name="email"
         placeholder="user@example.com"
-        prefix={<Img src="images/defaultNoData.png" alt="message / 24 / Outline" />}
+        prefix={<Img src="images/email.png" alt="message / 24 / Outline" />}
         className="w-full gap-[15px] rounded-tr-[10px] rounded-br-[10px] border-gray-300 border border-solid"
       />
     </div>

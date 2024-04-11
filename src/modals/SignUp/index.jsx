@@ -1,14 +1,14 @@
 import React from "react";
-import { Text, CheckBox, Button, Input, Img, Heading, Slider } from "../../components";
+import { Text, Button, Input, Img, Heading, Slider } from "../../components";
 import SignUpInputfield from "../../components/SignUpInputfield";
 import { default as ModalProvider } from "react-modal";
-
+import { CheckBox } from "../../components/CheckBox";
 export default function SignUp({ isOpen, ...props }) {
   const [sliderState, setSliderState] = React.useState(0);
   const sliderRef = React.useRef(null);
 
   return (
-    <ModalProvider {...props} appElement={document.getElementById("root")} isOpen={isOpen} className="min-w-[1052px]">
+    <ModalProvider {...props} appElement={document.getElementById("root")} isOpen={true} className="min-w-[1052px]">
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-row justify-center w-full px-14 py-[71px] md:p-5 bg-white-A700 rounded-[15px]">
           <div className="flex flex-row justify-center w-[97%]">
@@ -16,7 +16,7 @@ export default function SignUp({ isOpen, ...props }) {
               <div className="flex flex-row justify-center w-full">
                 <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
                   <div className="flex flex-col items-center justify-start w-[40%] md:w-full gap-[25px]">
-                    <Slider
+                    {/* <Slider
                       autoPlay
                       autoPlayInterval={2000}
                       responsive={{ 0: { items: 1 }, 550: { items: 1 }, 1050: { items: 3 } }}
@@ -40,15 +40,20 @@ export default function SignUp({ isOpen, ...props }) {
                           </Heading>
                         </React.Fragment>
                       ))}
-                    />
+                    /> */
+                      <Img
+                        src="https://www.globalgiving.org/pfil/24366/pict_large.jpg"
+                        alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
+                      />
+                    }
                     <div className="flex justify-center w-[36px] h-[10px] sm:w-full" />
                   </div>
                   <div className="h-[641px] w-px md:w-full md:h-px bg-gradient" />
                   <div className="flex flex-col items-center justify-start w-[42%] md:w-full">
                     <Button
-                      color="white_A700"
+                      // color="white_A700"
                       leftIcon={<Img src="images/img_googleplus_1_1.svg" alt="google-plus (1) 1" />}
-                      className="w-full gap-[23px] sm:px-5 !text-gray-700_01 border-gray-300 border border-solid rounded-[10px]"
+                      className="w-full gap-[23px] sm:px-5 !text-white-700_01 border-gray-300 border border-solid rounded-[10px]"
                     >
                       Sign in with google
                     </Button>
