@@ -1,6 +1,7 @@
 import React from "react";
 import { default as ModalProvider } from "react-modal";
-import { Button, Heading, Img, Input, Slider, Text } from "../../components";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Button, Img, Input, Text } from "../../components";
 import { CheckBox } from "../../components/CheckBox";
 import SignUpInputfield from "../../components/SignUpInputfield";
 
@@ -9,7 +10,12 @@ export default function LogIn({ isOpen, ...props }) {
   const sliderRef = React.useRef(null);
 
   return (
-    <ModalProvider {...props} appElement={document.getElementById("root")} isOpen={true} className="min-w-[1052px]">
+    <ModalProvider
+      {...props}
+      appElement={document.getElementById("root")}
+      isOpen={true}
+      className="min-w-[1052px]"
+    >
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-row justify-center w-full px-14 py-[71px] md:p-5 bg-white-A700 rounded-[15px]">
           <div className="flex flex-row justify-center w-[97%]">
@@ -17,54 +23,32 @@ export default function LogIn({ isOpen, ...props }) {
               <div className="flex flex-row justify-center w-full">
                 <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
                   <div className="flex flex-col items-center justify-start w-[40%] md:w-full gap-[25px]">
-                    {/* <Slider
-                      autoPlay
-                      autoPlayInterval={2000}
-                      responsive={{ 0: { items: 1 }, 550: { items: 1 }, 1050: { items: 3 } }}
-                      disableDotsControls
-                      activeIndex={sliderState}
-                      onSlideChanged={(e) => {
-                        setSliderState(e?.item);
-                      }}
-                      ref={sliderRef}
-                      className="w-full"
-                      items={[...Array(9)].map(() => (
-                        // <React.Fragment key={Math.random()}>
-                        <Heading size="2xl" as="h1" className="mx-2.5 !text-black-900_02 !font-metropolis">
-                          <>
-                            Welcome to
-                            <br />
-                            Educatsy Online
-                            <br />
-                            Learning Platform
-                          </>
-                        </Heading>
-                        // </React.Fragment>
-                      ))}
-                    /> */
-                      <Img
-                        src="https://www.globalgiving.org/pfil/24366/pict_large.jpg"
-                        alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
-                      />
-                    }
+                    <Img
+                      src="https://www.globalgiving.org/pfil/24366/pict_large.jpg"
+                      alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
+                    />
                     <div className="flex justify-center w-[36px] h-[10px] sm:w-full" />
                   </div>
                   <div className="h-[641px] w-px md:w-full md:h-px bg-gradient" />
                   <div className="flex flex-col items-center justify-start w-[42%] md:w-full">
                     <Button
-                      //color="bg-blue-500"
-                      leftIcon={<Img src="images/img_googleplus_1_1.svg" alt="google-plus (1) 1" />}
+                      leftIcon={
+                        <Img
+                          src="images/img_googleplus_1_1.svg"
+                          alt="google-plus (1) 1"
+                        />
+                      }
                       className="w-full gap-[23px] sm:px-5 !text-white-700_01 border-gray-300 border border-solid rounded-[10px]"
                     >
                       Sign in with google
                     </Button>
                     <div className="flex flex-row justify-center items-center w-full mt-5 gap-[11px] p-[3px]">
                       <div className="h-px w-[6%] ml-[55px] md:ml-5 bg-gray-700_01" />
-                      <a href="#" className="mt-[3px]">
+                      <Link to="#">
                         <Text as="p" className="!text-gray-700_01 text-center">
                           Or sign in with your email
                         </Text>
-                      </a>
+                      </Link>
                       <div className="h-px w-[6%] mr-[55px] md:mr-5 bg-gray-700_01" />
                     </div>
                     <div className="flex flex-col items-center justify-start w-full mt-5 gap-5">
@@ -85,12 +69,16 @@ export default function LogIn({ isOpen, ...props }) {
                               alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
                             />
                           }
-                          suffix={<Img src="images/img_eye_1_1.svg" alt="eye (1) 1" />}
+                          suffix={
+                            <Img src="images/img_eye_1_1.svg" alt="eye (1) 1" />
+                          }
                           className="w-full sm:w-full gap-[15px] rounded-tr-[10px] rounded-br-[10px] border-gray-300 border border-solid"
                         />
                       </div>
                     </div>
-                    <Button className="w-full mt-[30px] sm:px-5 font-medium rounded-[10px]">Sign In</Button>
+                    <Button className="w-full mt-[30px] sm:px-5 font-medium rounded-[10px]">
+                      Sign In
+                    </Button>
                     <div className="flex flex-row justify-between items-center w-full mt-6 py-[3px]">
                       <CheckBox
                         shape="square"
@@ -99,23 +87,23 @@ export default function LogIn({ isOpen, ...props }) {
                         id="keepmesignedin"
                         className="gap-2.5 text-gray-700_01 text-left"
                       />
-                      <a href="#">
+                      <Link to="#">
                         <Text as="p" className="!text-gray-700_01">
                           Forgot Password?
                         </Text>
-                      </a>
+                      </Link>
                     </div>
                     <div className="flex flex-row justify-start w-[66%] md:w-full mt-6 gap-1 py-[3px]">
-                      <a href="#" className="my-px">
+                      <Link to="#">
                         <Text as="p" className="!text-gray-700_01 !font-medium">
                           Don’t have an account?
                         </Text>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link to="/signup">
                         <Text as="p" className="!text-red-300_01 !font-medium">
                           Sign Up
                         </Text>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -124,6 +112,6 @@ export default function LogIn({ isOpen, ...props }) {
           </div>
         </div>
       </div>
-    </ModalProvider >
+    </ModalProvider>
   );
 }
