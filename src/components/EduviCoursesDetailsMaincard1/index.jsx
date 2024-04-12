@@ -1,10 +1,9 @@
-import React from "react";
-import { Button, Img, Heading, RatingBar } from "./..";
+import { Button, Heading, Img, RatingBar } from "./..";
 
 export default function EduviCoursesDetailsMaincard1({
   imageOne = "images/defaultNoData.png",
   thethree = "The Three Musketeers",
-  price = "$40.00",
+  price = "₹0",
   ...props
 }) {
   return (

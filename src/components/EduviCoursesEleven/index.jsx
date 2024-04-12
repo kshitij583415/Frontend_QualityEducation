@@ -1,6 +1,4 @@
-import React from "react";
-import { Button, Text, Heading, Img } from "./..";
-
+import { Button, Heading, Img, Text } from "./..";
 export default function EduviCoursesEleven({
   standardone = "Standard PUC",
   standard1isa = "Standard 7 Blood Management mandates that leaders of health service organizations...",
@@ -15,7 +13,7 @@ export default function EduviCoursesEleven({
           <div className="flex flex-col items-center justify-start w-full gap-[9px]">
             <Heading size="lg" as="h1" className="text-center">
               {standardone}
-            </Heading>
+            </Heading>  
             <Text as="p" className="text-center !leading-[30px]">
               {standard1isa}
             </Text>

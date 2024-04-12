@@ -1,5 +1,4 @@
-import React from "react";
-import { Button, Text, Heading, Img } from "./..";
+import { Button, Heading, Img, Text } from "./..";
 
 export default function EduviCoursesTen({
   standardone = "Standard Ten",

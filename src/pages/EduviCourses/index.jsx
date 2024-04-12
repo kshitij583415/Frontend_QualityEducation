@@ -1,8 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { CloseSVG } from "../../assets/images";
-import { Button, Heading, Img, Input, Text } from "../../components";
-import EduviCoursesDetailsMaincard from "../../components/EduviCoursesDetailsMaincard";
+import { Heading, Img, Input, Text } from "../../components";
 import EduviCoursesDetailsMaincard1 from "../../components/EduviCoursesDetailsMaincard1";
 import EduviCoursesEight from "../../components/EduviCoursesEight";
 import EduviCoursesEleven from "../../components/EduviCoursesEleven";
@@ -346,7 +345,7 @@ export default function EduviCoursesPage() {
             <div className="flex flex-col items-center justify-start w-full gap-10">
               <div className="flex flex-col items-start justify-start w-full pt-0.5 gap-2.5">
                 <Heading size="xl" as="h2">
-                  Other Courses For High School
+                  Our Other Courses
                 </Heading>
                 <div className="flex flex-row md:flex-col justify-start sm:w-full gap-[42px] md:gap-5">
                   <Input
@@ -380,7 +379,7 @@ export default function EduviCoursesPage() {
                   imageOne="images/img_image_103x160.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
-                <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" />
+                {/* <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
                 <EduviCoursesDetailsMaincard1
                   imageOne="images/img_image_2.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
@@ -389,8 +388,8 @@ export default function EduviCoursesPage() {
                   imageOne="images/img_image_3.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
-                <EduviCoursesDetailsMaincard className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 shadow-xs cursor-pointer rounded-[10px] hover:shadow-xs" />
-                <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" />
+                {/* <EduviCoursesDetailsMaincard className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 shadow-xs cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
+                {/* <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
                 <EduviCoursesDetailsMaincard1
                   imageOne="images/img_image_2.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
@@ -403,10 +402,10 @@ export default function EduviCoursesPage() {
                   imageOne="images/img_image_103x160.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
-                <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" />
+                {/* <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
               </div>
             </div>
-            <div className="flex flex-row justify-start items-center w-full pl-[497px] pr-14 gap-[19px] md:px-5">
+            {/* <div className="flex flex-row justify-start items-center w-full pl-[497px] pr-14 gap-[19px] md:px-5">
               <Button color="white_A700" size="lg" shape="round" className="w-[44px] !rounded-md">
                 <Img src="images/img_arrow_left.svg" />
               </Button>
@@ -422,7 +421,7 @@ export default function EduviCoursesPage() {
               <Button size="lg" shape="round" className="w-[44px] !rounded-md">
                 <Img src="images/img_arrow_right.svg" />
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
         <footer className="flex flex-col items-center justify-center w-full">
