@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Text, Heading, Img } from "./..";
 
 export default function EduviCoursesTen({
-  standardone = "O- Level",
+  standardone = "Standard Ten",
   standard1isa = "Standard 6 requires an organisation to have a system to resolve complaints...",
   classDetails = "Class Details",
   ...props

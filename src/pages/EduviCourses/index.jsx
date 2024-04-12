@@ -32,7 +32,7 @@ export default function EduviCoursesPage() {
   return (
     <>
       <Helmet>
-        <title>Kshitij's Edu4U</title>
+        <title>Edu4U</title>
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-100">
@@ -292,7 +292,7 @@ export default function EduviCoursesPage() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-start w-full gap-[47px]">
-          <div className="flex flex-row md:flex-col justify-start w-full gap-5 md:px-5 max-w-7xl">
+          {/* <div className="flex flex-row md:flex-col justify-start w-full gap-5 md:px-5 max-w-7xl">
             <Button color="white_A700" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
               All Courses
             </Button>
@@ -317,7 +317,7 @@ export default function EduviCoursesPage() {
             <Button color="white_A700" className="!text-deep_orange-400 font-medium min-w-[142px] rounded-[10px]">
               More Courses
             </Button>
-          </div>
+          </div> */}
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-start justify-start w-full gap-[23px] md:px-5 max-w-7xl">
               <Heading size="xl" as="h2">

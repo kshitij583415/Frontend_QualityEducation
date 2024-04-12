@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import { CloseSVG } from "../../assets/images";
 import { Heading, Img, Input, RatingBar, Text } from "../../components";
 import EduviShopEight from "../../components/EduviShopEight";
@@ -28,15 +29,25 @@ export default function EduviShopPage() {
     <>
       <Helmet>
         <title>Kshitij's Edu4U</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-100">
         <div className="flex flex-col items-center justify-start w-full gap-12">
           <Header className="flex justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" />
           <div className="flex flex-col items-start justify-start w-full gap-[5px] p-5 md:px-5 bg-red-50 max-w-7xl rounded-[20px]">
-            <Text as="p" className="mt-[5px] ml-2.5 md:ml-0 !text-black-900_02 !font-medium">
-              Home | Shop
+            <Text
+              as="p"
+              className="mt-[5px] ml-2.5 md:ml-0 !text-black-900_02 !font-medium flex items-center"
+            >
+              <Link to="/">Home |</Link>{" "}
+              <span className="ml-1">
+                <Link to="/eduvishop">Books</Link>
+              </span>
             </Text>
+
             <div className="flex flex-row md:flex-col justify-between items-center w-[99%] md:w-full ml-2.5 gap-[492px] md:gap-10 md:ml-0">
               <Heading size="3xl" as="h1" className="w-[30%] !font-semibold">
                 <>
@@ -83,7 +94,7 @@ export default function EduviShopPage() {
                       </>
                     </Heading>
                     <Heading as="h4" className="!text-red-300_01">
-                      $39.00
+                      ₹0
                     </Heading>
                   </div>
                 </div>
@@ -110,7 +121,7 @@ export default function EduviShopPage() {
                       </>
                     </Heading>
                     <Heading as="h6" className="!text-red-300_01">
-                      $39.00
+                      ₹0
                     </Heading>
                   </div>
                 </div>
@@ -137,14 +148,14 @@ export default function EduviShopPage() {
                       </>
                     </Heading>
                     <Heading as="h6" className="!text-red-300_01">
-                      $39.00
+                      ₹0
                     </Heading>
                   </div>
                 </div>
               </div>
-              <Text size="lg" as="p" className="!text-red-300_01">
+              {/* <Text size="lg" as="p" className="!text-red-300_01">
                 See More
-              </Text>
+              </Text> */}
             </div>
             <div className="flex flex-col items-start justify-start w-full gap-4">
               <Heading size="xl" as="h3" className="!text-black-900_02">
@@ -174,7 +185,7 @@ export default function EduviShopPage() {
                       </>
                     </Heading>
                     <Heading as="h6" className="!text-red-300_01">
-                      $39.00
+                      ₹0
                     </Heading>
                   </div>
                 </div>
@@ -201,7 +212,7 @@ export default function EduviShopPage() {
                       </>
                     </Heading>
                     <Heading as="h6" className="!text-red-300_01">
-                      $39.00
+                      ₹0
                     </Heading>
                   </div>
                 </div>
@@ -228,14 +239,14 @@ export default function EduviShopPage() {
                       </>
                     </Heading>
                     <Heading as="h6" className="!text-red-300_01">
-                      $39.00
+                      ₹0
                     </Heading>
                   </div>
                 </div>
               </div>
-              <Text size="lg" as="p" className="!text-red-300_01">
+              {/* <Text size="lg" as="p" className="!text-red-300_01">
                 See More
-              </Text>
+              </Text> */}
             </div>
           </div>
           <div className="flex flex-col items-center justify-start w-[65%] md:w-full gap-10">
@@ -264,16 +275,30 @@ export default function EduviShopPage() {
                   onChange={(e) => setSearchBarValue6(e)}
                   suffix={
                     searchBarValue6?.length > 0 ? (
-                      <CloseSVG onClick={() => setSearchBarValue6("")} height={24} width={24} fillColor="#ffffffff" />
+                      <CloseSVG
+                        onClick={() => setSearchBarValue6("")}
+                        height={24}
+                        width={24}
+                        fillColor="#ffffffff"
+                      />
                     ) : (
-                      <Img src="images/img_search.svg" alt="search" className="cursor-pointer" />
+                      <Img
+                        src="images/img_search.svg"
+                        alt="search"
+                        className="cursor-pointer"
+                      />
                     )
                   }
                   className="w-[67%] sm:w-full gap-[35px] !text-gray-700_99 rounded-tr-[10px] rounded-br-[10px] font-medium"
                 />
                 <SelectBox
                   shape="round"
-                  indicator={<Img src="images/img_arrowdown_red_300_01.svg" alt="arrow_down" />}
+                  indicator={
+                    <Img
+                      src="images/img_arrowdown_red_300_01.svg"
+                      alt="arrow_down"
+                    />
+                  }
                   name="sortbylatest"
                   placeholder="Sort by: Latest"
                   options={dropDownOptions}

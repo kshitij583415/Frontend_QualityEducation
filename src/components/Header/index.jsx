@@ -23,7 +23,9 @@ export default function Header({ ...props }) {
           <div className="flex items-center gap-2.5"> 
             <Img src="images/img_profile_24_outline.svg" alt="profiletwentyfo" className="h-[30px] w-[30px] ml-6" />
             <Text as="p" className="text-gray-900 font-medium">
-              My Account
+            <Link to='/signup'>
+              Login/Register
+            </Link>
             </Text>
           </div>
         </div>
