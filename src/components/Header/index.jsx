@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Img, Text } from "./..";
 
 export default function Header({ ...props }) {
@@ -9,19 +10,19 @@ export default function Header({ ...props }) {
         </div>
         <div className="flex flex-row justify-end items-center w-[70%] md:w-full"> {/* Right side with other elements */}
           <div className="flex flex-row justify-end items-center w-full gap-6 md:gap-5">
-            <Text as="p" className="!text-gray-900 !font-medium">
-              Shop
-            </Text>
-            <Text as="p" className="!text-gray-900 !font-medium">
+            <Link to="/eduvishop" className="text-gray-900 font-medium"> {/* Link to Shop */}
+              Books
+            </Link>
+            <Link to="/allmentors" className="text-gray-900 font-medium"> {/* Link to Mentors */}
               Mentors
-            </Text>
-            <Text as="p" className="!text-gray-900 !font-medium">
+            </Link>
+            <Link to="/eduvicourses" className="text-gray-900 font-medium"> 
               Courses
-            </Text>
+            </Link>
           </div>
-          <div className="flex items-center gap-2.5 "> {/* Adjusted flex properties */}
+          <div className="flex items-center gap-2.5"> 
             <Img src="images/img_profile_24_outline.svg" alt="profiletwentyfo" className="h-[30px] w-[30px] ml-6" />
-            <Text as="p" className="!text-gray-900  !font-medium">
+            <Text as="p" className="text-gray-900 font-medium">
               My Account
             </Text>
           </div>

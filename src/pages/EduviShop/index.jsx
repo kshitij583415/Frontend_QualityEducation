@@ -292,7 +292,7 @@ export default function EduviShopPage() {
                 <EduviShopNine className="flex flex-col items-center justify-start w-full gap-2" />
               </div>
             </div>
-            <div className="flex flex-row justify-between items-center w-[35%] md:w-full">
+            {/* <div className="flex flex-row justify-between items-center w-[35%] md:w-full">
               <Button color="white_A700" size="lg" shape="round" className="w-[15%] !rounded-md">
                 <Img src="images/img_arrow_left.svg" />
               </Button>
@@ -308,7 +308,7 @@ export default function EduviShopPage() {
               <Button size="lg" shape="round" className="w-[15%] !rounded-md">
                 <Img src="images/img_arrow_right.svg" />
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
         <Footer className="flex flex-col items-center justify-center w-full" />

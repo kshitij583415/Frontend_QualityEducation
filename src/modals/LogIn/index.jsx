@@ -5,6 +5,7 @@ import { Button, Img, Input, Text } from "../../components";
 import { CheckBox } from "../../components/CheckBox";
 import SignUpInputfield from "../../components/SignUpInputfield";
 
+
 export default function LogIn({ isOpen, ...props }) {
   const [sliderState, setSliderState] = React.useState(0);
   const sliderRef = React.useRef(null);
