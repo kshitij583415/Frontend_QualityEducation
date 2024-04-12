@@ -1,4 +1,4 @@
-import LogIn from "modals/Login";
+import LogIn from "modals/LogIn";
 import SignUp from "modals/SignUp";
 import Allmentors from "pages/Allmentors";
 import EduviCourses from "pages/EduviCourses";
