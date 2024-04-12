@@ -1,4 +1,4 @@
-import LogIn from "modals/Login";
+import LogIn from "modals/LogIn";
 import SignUp from "modals/SignUp";
 import Allmentors from "pages/Allmentors";
 import EduviCourses from "pages/EduviCourses";
@@ -19,8 +19,8 @@ const ProjectRoutes = () => {
       element: <LogIn />
     },
     {
-      path:"signup",
-      element: <SignUp/>
+      path: "signup",
+      element: <SignUp />
     },
     { path: "*", element: <NotFound /> },
 
