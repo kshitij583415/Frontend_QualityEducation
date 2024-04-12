@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { CloseSVG } from "../../assets/images";
-import { Button, Heading, Img, Input, RatingBar, Text } from "../../components";
+import { Heading, Img, Input, RatingBar, Text } from "../../components";
 import EduviShopEight from "../../components/EduviShopEight";
 import EduviShopFive from "../../components/EduviShopFive";
 import EduviShopFour from "../../components/EduviShopFour";
@@ -240,7 +240,7 @@ export default function EduviShopPage() {
           </div>
           <div className="flex flex-col items-center justify-start w-[65%] md:w-full gap-10">
             <div className="flex flex-col items-center justify-start w-full gap-[30px]">
-              <div className="flex flex-row md:flex-col justify-start w-full gap-6 md:gap-5">
+              {/* <div className="flex flex-row md:flex-col justify-start w-full gap-6 md:gap-5">
                 <Button color="orange_200_01" className="sm:px-5 font-medium min-w-[131px] rounded-[10px]">
                   All Books
                 </Button>
@@ -253,7 +253,7 @@ export default function EduviShopPage() {
                 <Button color="white_A700" className="sm:px-5 font-medium min-w-[212px] rounded-[10px]">
                   College
                 </Button>
-              </div>
+              </div> */}
               <div className="flex flex-row sm:flex-col justify-start w-full gap-[15px] sm:gap-5">
                 <Input
                   color="white_A700"
