@@ -5,8 +5,10 @@ export default function Header({ ...props }) {
   return (
     <header {...props}>
       <div className="flex flex-row md:flex-col justify-between items-center w-full mx-auto md:gap-10 md:px-5 max-w-7xl">
-        <div className="flex items-center"> {/* Left side with logo */}
+        <div className="flex items-center"> 
+        <Link to="/">
           <Img src="images/logo.jpg" alt="logo_one" className="h-[40px]" />
+        </Link>
         </div>
         <div className="flex flex-row justify-end items-center w-[70%] md:w-full"> {/* Right side with other elements */}
           <div className="flex flex-row justify-end items-center w-full gap-6 md:gap-5">

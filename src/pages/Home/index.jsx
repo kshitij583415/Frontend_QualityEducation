@@ -1,6 +1,7 @@
+import FeatureCard from "components/Features";
 import Testimonials from "pages/Testimonials";
-import Header from "../../components/Header";
 import Vision from "pages/Vision";
+import Header from "../../components/Header";
 export default function HomePage() {
   return (
     <>
@@ -24,41 +25,11 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-      <h1 className="text-3xl font-bold text-center mt-6 mb-6">Our Vision</h1>
+      <h1 className="text-3xl font-bold text-center mt-8 mb-6" style={{fontSize:"50px"}}>Our Vision</h1>
 
       <Vision />
       {/* Features Section */}
-      <section className="bg-gray-200 py-20">
-        <div className="container mx-auto flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-bold text-center mb-12">Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature Card 1 */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Popular Courses</h3>
-              <p className="text-gray-700">
-                Discover our most sought-after courses tailored for your
-                learning journey.
-              </p>
-            </div>
-            {/* Feature Card 2 */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Mentors</h3>
-              <p className="text-gray-700">
-                Learn from industry experts and academic leaders with a passion
-                for teaching.
-              </p>
-            </div>
-            {/* Feature Card 3 */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Free Resources</h3>
-              <p className="text-gray-700">
-                Explore our collection of free books and educational materials
-                to enhance your learning experience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FeatureCard />
       <Testimonials />
 
       {/* <Footer className="w-full" /> */}

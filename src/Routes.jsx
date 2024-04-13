@@ -1,9 +1,8 @@
-import LogIn from "modals/LogIn";
+import LogIn from "modals/Login";
 import SignUp from "modals/SignUp";
 import Allmentors from "pages/Allmentors";
 import EduviCourses from "pages/EduviCourses";
 import EduviCoursesDetails from "pages/EduviCoursesDetails";
-import EduviCoursesPricing from "pages/EduviCoursesPricing";
 import EduviJoinAsTeacher from "pages/EduviJoinAsTeacher";
 import EduviShop from "pages/EduviShop";
 import Home from "pages/Home";
@@ -13,7 +12,7 @@ import { useRoutes } from "react-router-dom";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "home", element: <Home /> },
+    { path: "/", element: <Home /> },
     {
       path: "login",
       element: <LogIn />
@@ -25,7 +24,7 @@ const ProjectRoutes = () => {
     { path: "*", element: <NotFound /> },
 
     {
-      path: "/",
+      path: "/coursesdetail",
       element: <EduviCoursesDetails />,
     },
     {
