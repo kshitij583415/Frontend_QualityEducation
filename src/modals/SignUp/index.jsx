@@ -12,20 +12,14 @@ export default function SignUp({ isOpen, ...props }) {
   return (
     <ModalProvider {...props} appElement={document.getElementById("root")} isOpen={true} className="min-w-[1052px]">
       <div className="flex flex-row justify-center w-full">
-        <div className="flex flex-row justify-center w-full px-14 py-[71px] md:p-5 bg-white-A700 rounded-[15px]">
+        <div className="flex flex-row justify-center w-full px-14  md:p-5 bg-white-A700 rounded-[15px]">
           <div className="flex flex-row justify-center w-[97%]">
             <div className="flex flex-row justify-center w-full p-2">
               <div className="flex flex-row justify-center w-full">
                 <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
-                  <div className="flex flex-col items-center justify-start w-[40%] md:w-full gap-[25px]">
-                    <Img
-                      src="https://www.globalgiving.org/pfil/24366/pict_large.jpg"
-                      alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
-                    />
-                    <div className="flex justify-center w-[36px] h-[10px] sm:w-full" />
-                  </div>
-                  <div className="h-[641px] w-px md:w-full md:h-px bg-gradient" />
-                  <div className="flex flex-col items-center justify-start w-[42%] md:w-full">
+                
+                 
+                  <div className="flex flex-col items-center justify-start w-[40%] md:w-full">
                     <Button
                       leftIcon={<Img src="images/img_googleplus_1_1.svg" alt="google-plus (1) 1" />}
                       className="w-full gap-[23px] sm:px-5 !text-white-700_01 border-gray-300 border border-solid rounded-[10px]"
@@ -100,6 +94,16 @@ export default function SignUp({ isOpen, ...props }) {
                         </Text>
                       </Link>
                     </div>
+                  </div>
+                  <div className="h-[641px] w-px md:w-full md:h-px bg-gradient" />
+                  <div className="flex flex-col items-center justify-start w-[55%] md:w-full gap-[2px]">
+                    <Img
+                      src="images/login4.webp"
+                      alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
+                      className="w-50vw rounded-[15px]"
+                      style={{ height: "70vh", maxWidth: "calc(100% - 40px)" }}
+                    />
+                    <div className="flex justify-center w-[36px] h-[10px] sm:w-full" />
                   </div>
                 </div>
               </div>

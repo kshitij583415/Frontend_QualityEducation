@@ -1,10 +1,10 @@
+// LogIn.js
 import React from "react";
 import { default as ModalProvider } from "react-modal";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 import { Button, Img, Input, Text } from "../../components";
 import { CheckBox } from "../../components/CheckBox";
 import SignUpInputfield from "../../components/SignUpInputfield";
-
 
 export default function LogIn({ isOpen, ...props }) {
   const [sliderState, setSliderState] = React.useState(0);
@@ -17,21 +17,23 @@ export default function LogIn({ isOpen, ...props }) {
       isOpen={true}
       className="min-w-[1052px]"
     >
-      <div className="flex flex-row justify-center w-full">
-        <div className="flex flex-row justify-center w-full px-14 py-[71px] md:p-5 bg-white-A700 rounded-[15px]">
-          <div className="flex flex-row justify-center w-[97%]">
+      <div className="flex flex-row justify-center w-full px-10 ">
+        <div className="flex flex-row justify-center w-full">
+          <div className="flex flex-row justify-center w-[95%]">
             <div className="flex flex-row justify-center w-full p-2">
               <div className="flex flex-row justify-center w-full">
                 <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
-                  <div className="flex flex-col items-center justify-start w-[40%] md:w-full gap-[25px]">
+                  <div className="flex flex-col items-center justify-start w-[55%] md:w-full gap-[2px]">
                     <Img
-                      src="https://www.globalgiving.org/pfil/24366/pict_large.jpg"
+                      src="images/login4.webp"
                       alt="lock,pad lock,safe,security,protected,lock alt, / 24 / Outline"
+                      className="w-50vw rounded-[15px]"
+                      style={{ height: "75vh", maxWidth: "calc(100% - 40px)" }}
                     />
                     <div className="flex justify-center w-[36px] h-[10px] sm:w-full" />
                   </div>
                   <div className="h-[641px] w-px md:w-full md:h-px bg-gradient" />
-                  <div className="flex flex-col items-center justify-start w-[42%] md:w-full">
+                  <div className="flex flex-col items-center justify-start w-[40%] md:w-full">
                     <Button
                       leftIcon={
                         <Img
@@ -39,7 +41,7 @@ export default function LogIn({ isOpen, ...props }) {
                           alt="google-plus (1) 1"
                         />
                       }
-                      className="w-full gap-[23px] sm:px-5 !text-white-700_01 border-gray-300 border border-solid rounded-[10px]"
+                      className="w-full gap-[23px] sm:px-5 bg-blue-350 text-white border-gray-300 border border-solid rounded-[10px]"
                     >
                       Sign in with google
                     </Button>
@@ -53,7 +55,7 @@ export default function LogIn({ isOpen, ...props }) {
                       <div className="h-px w-[6%] mr-[55px] md:mr-5 bg-gray-700_01" />
                     </div>
                     <div className="flex flex-col items-center justify-start w-full mt-5 gap-5">
-                      <SignUpInputfield className="flex flex-col items-start justify-start w-full pt-[5px] gap-[9px]" />
+                      <SignUpInputfield className="w-full" />
                       <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[9px]">
                         <Text as="p" className="!text-gray-900 !font-medium">
                           Password
@@ -77,7 +79,7 @@ export default function LogIn({ isOpen, ...props }) {
                         />
                       </div>
                     </div>
-                    <Button className="w-full mt-[30px] sm:px-5 font-medium rounded-[10px]">
+                    <Button className="w-full mt-[30px] sm:px-5 bg-blue-350 text-white font-medium rounded-[10px]">
                       Sign In
                     </Button>
                     <div className="flex flex-row justify-between items-center w-full mt-6 py-[3px]">
@@ -101,9 +103,10 @@ export default function LogIn({ isOpen, ...props }) {
                         </Text>
                       </Link>
                       <Link to="/signup">
-                        <Text as="p" className="!text-red-300_01 !font-medium">
+                        <Text as="p" className="text-red-400 !font-medium">
                           Sign Up
                         </Text>
+
                       </Link>
                     </div>
                   </div>
