@@ -13,7 +13,7 @@ import { useRoutes } from "react-router-dom";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "dhiwise-dashboard", element: <Home /> },
+    { path: "home", element: <Home /> },
     {
       path: "login",
       element: <LogIn />
