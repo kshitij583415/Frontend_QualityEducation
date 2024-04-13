@@ -13,7 +13,7 @@ export default function AllmentorsPage() {
   return (
     <>
       <Helmet>
-        <title>01fe21bcs314's Application2</title>
+        <title>Edu4U</title>
         <meta
           name="description"
           content="Web site created using create-react-app"
@@ -32,9 +32,8 @@ export default function AllmentorsPage() {
             <div className="flex flex-row md:flex-col justify-between items-center w-[99%] md:w-full ml-2.5 gap-[420px] md:gap-10 md:ml-0">
               <Heading size="2xl" as="h1" className="w-[31%] !font-semibold">
                 <>
-                  Educatsy has the
-                  <br />
-                  qualified mentor
+                  Scholar Sphere has 
+                  qualified mentors
                 </>
               </Heading>
               <div className="flex flex-row justify-end w-[35%] md:w-full py-[3px]">
@@ -314,7 +313,7 @@ export default function AllmentorsPage() {
             selectedTabClassName="!text-white-A700 bg-orange-200_01 rounded-[10px]"
             selectedTabPanelClassName="relative tab-panel--selected"
           >
-            <TabList className="flex flex-row md:flex-col justify-center w-full gap-20 p-3.5 md:gap-10">
+            {/* <TabList className="flex flex-row md:flex-col justify-center w-full gap-20 p-3.5 md:gap-10">
               <Tab className="ml-[193px] md:ml-5 text-gray-900 text-base font-medium">
                 All Mentors
               </Tab>
@@ -330,7 +329,7 @@ export default function AllmentorsPage() {
               <Tab className="mr-[193px] md:mr-5 text-gray-900 text-base font-medium">
                 For Technology
               </Tab>
-            </TabList>
+            </TabList> */}
             <div className="flex flex-col items-center justify-start w-full gap-[42px]">
               {[...Array(5)].map((_, index) => (
                 <TabPanel

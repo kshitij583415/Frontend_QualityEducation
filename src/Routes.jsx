@@ -37,10 +37,6 @@ const ProjectRoutes = () => {
       element: <EduviCourses />,
     },
     {
-      path: "eduvicoursespricing",
-      element: <EduviCoursesPricing />,
-    },
-    {
       path: "eduvijoinasteacher",
       element: <EduviJoinAsTeacher />,
     },

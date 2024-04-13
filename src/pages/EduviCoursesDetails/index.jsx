@@ -252,7 +252,7 @@ export default function EduviCoursesDetailsPage() {
                     Price
                   </Heading>
                   <Heading size="lg" as="h4" className="!text-deep_orange-400 text-right !font-bold">
-                    $49.00
+                    ₹0
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between w-full">
@@ -326,7 +326,7 @@ export default function EduviCoursesDetailsPage() {
                 </div>
               </div>
               <Button size="2xl" shape="round" className="w-full sm:px-5 font-medium">
-                Purchase Course
+                Enroll
               </Button>
             </div>
           </div>
@@ -337,8 +337,14 @@ export default function EduviCoursesDetailsPage() {
               Similar Courses
             </Heading>
             <div className="w-full gap-10 grid-cols-2 md:grid-cols-1 md:gap-5 grid">
-              <EduviCoursesDetailsMaincard className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 shadow-xs cursor-pointer rounded-[10px] hover:shadow-xs" />
-              <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" />
+              <EduviCoursesDetailsMaincard1
+                imageOne="images/img_image_2.png"
+                className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
+              />
+              <EduviCoursesDetailsMaincard1
+                imageOne="images/img_image_3.png"
+                className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
+              />
               <EduviCoursesDetailsMaincard1
                 imageOne="images/img_image_2.png"
                 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"

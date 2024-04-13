@@ -16,16 +16,16 @@ export default function Header({ ...props }) {
             <Link to="/allmentors" className="text-gray-900 font-medium"> {/* Link to Mentors */}
               Mentors
             </Link>
-            <Link to="/eduvicourses" className="text-gray-900 font-medium"> 
+            <Link to="/eduvicourses" className="text-gray-900 font-medium">
               Courses
             </Link>
           </div>
-          <div className="flex items-center gap-2.5"> 
+          <div className="flex items-center gap-2.5">
             <Img src="images/img_profile_24_outline.svg" alt="profiletwentyfo" className="h-[30px] w-[30px] ml-6" />
             <Text as="p" className="text-gray-900 font-medium">
-            <Link to='/signup'>
-              Login/Register
-            </Link>
+              <Link to='/login'>
+                Login/Register
+              </Link>
             </Text>
           </div>
         </div>
