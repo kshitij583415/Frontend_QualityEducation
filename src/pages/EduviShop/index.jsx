@@ -51,7 +51,7 @@ export default function EduviShopPage() {
             <div className="flex flex-row md:flex-col justify-between items-center w-[99%] md:w-full ml-2.5 gap-[492px] md:gap-10 md:ml-0">
               <Heading size="3xl" as="h1" className="w-[30%] !font-semibold">
                 <>
-                  Educatsy Online
+                  ScholarSphere Online
                   <br />
                   Book Shop
                 </>

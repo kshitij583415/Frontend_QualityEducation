@@ -9,7 +9,10 @@ export default function SinglementordetailsPage() {
     <>
       <Helmet>
         <title>01fe21bcs314's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-100">
         <div className="flex flex-col items-center justify-start w-full gap-[60px]">
@@ -20,7 +23,10 @@ export default function SinglementordetailsPage() {
                 <div className="flex flex-col items-start justify-start w-full">
                   <div className="flex flex-row justify-start w-full">
                     <div className="flex flex-row justify-start w-full p-[29px] sm:p-5 bg-red-50 rounded-[20px]">
-                      <Text as="p" className="mb-[92px] !text-black-900_02 !font-medium">
+                      <Text
+                        as="p"
+                        className="mb-[92px] !text-black-900_02 !font-medium"
+                      >
                         Home | Mentor | Kristin Watson
                       </Text>
                     </div>
@@ -51,17 +57,28 @@ export default function SinglementordetailsPage() {
               <div className="flex flex-col items-center justify-start w-[66%] md:w-full gap-[29px]">
                 <div className="flex flex-row md:flex-col justify-start w-full gap-6 md:gap-5">
                   <div className="flex flex-row md:flex-col justify-start w-[79%] md:w-full gap-[19px] md:gap-5">
-                    <Button color="orange_200_01" className="sm:px-5 font-medium min-w-[205px] rounded-[10px]">
+                    <Button
+                      color="orange_200_01"
+                      className="sm:px-5 font-medium min-w-[205px] rounded-[10px]"
+                    >
                       About
                     </Button>
-                    <Button color="white_A700" className="sm:px-5 font-medium min-w-[205px] rounded-[10px]">
+                    <Button
+                      color="white_A700"
+                      className="sm:px-5 font-medium min-w-[205px] rounded-[10px]"
+                    >
                       Courses
                     </Button>
-                    <Button color="white_A700" className="sm:px-5 font-medium min-w-[205px] rounded-[10px]">
+                    <Button
+                      color="white_A700"
+                      className="sm:px-5 font-medium min-w-[205px] rounded-[10px]"
+                    >
                       Reviews
                     </Button>
                   </div>
-                  <Button className="sm:px-5 font-medium min-w-[160px] rounded-[10px]">Contact Now</Button>
+                  <Button className="sm:px-5 font-medium min-w-[160px] rounded-[10px]">
+                    Contact Now
+                  </Button>
                 </div>
                 <div className="flex flex-col items-center justify-start w-full gap-[29px]">
                   <div className="flex flex-col items-start justify-start w-full gap-2">
@@ -70,13 +87,17 @@ export default function SinglementordetailsPage() {
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
                       <>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        Risus commodo viverra maecenas accumsan lacus vel
+                        facilisis consectetur adipiscing elit.
                         <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        Risus commodo viverra maecenas accumsan lacus vel
+                        facilisis consectetur adipiscing elit.
                       </>
                     </Text>
                   </div>
@@ -85,9 +106,11 @@ export default function SinglementordetailsPage() {
                       Certification
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                      maecenas accumsan lacus vel facilisis consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                      commodo viverra maecenas accumsan lacus vel facilisis
+                      consectetur adipiscing elit.
                     </Text>
                   </div>
                 </div>
@@ -97,7 +120,11 @@ export default function SinglementordetailsPage() {
                   <Heading size="s" as="h3" className="!text-gray-700_01">
                     Total Course
                   </Heading>
-                  <Heading size="lg" as="h4" className="!text-deep_orange-400 text-right">
+                  <Heading
+                    size="lg"
+                    as="h4"
+                    className="!text-deep_orange-400 text-right"
+                  >
                     30
                   </Heading>
                 </div>
@@ -106,7 +133,11 @@ export default function SinglementordetailsPage() {
                     <Heading size="s" as="h5" className="!text-gray-700_01">
                       Ratings
                     </Heading>
-                    <Img src="images/img_vector_amber_500.svg" alt="vector_one" className="h-[16px] w-[16px] mt-0.5" />
+                    <Img
+                      src="images/img_vector_amber_500.svg"
+                      alt="vector_one"
+                      className="h-[16px] w-[16px] mt-0.5"
+                    />
                   </div>
                   <Heading size="s" as="h6" className="text-right">
                     4.9(153)
@@ -146,11 +177,24 @@ export default function SinglementordetailsPage() {
                       alt="facebooklogoone"
                       className="h-[22px] w-[22px]"
                     />
-                    <Button color="deep_orange_400" size="xs" shape="circle" className="w-[36px]">
+                    <Button
+                      color="deep_orange_400"
+                      size="xs"
+                      shape="circle"
+                      className="w-[36px]"
+                    >
                       <Img src="images/img_instagram_icon.svg" />
                     </Button>
-                    <Img src="images/img_twitter_logo_gray_900.svg" alt="twitterlogo_one" className="h-[17px]" />
-                    <Img src="images/img_linkedin_icon_gray_900.svg" alt="linkedinicon" className="h-[18px]" />
+                    <Img
+                      src="images/img_twitter_logo_gray_900.svg"
+                      alt="twitterlogo_one"
+                      className="h-[17px]"
+                    />
+                    <Img
+                      src="images/img_linkedin_icon_gray_900.svg"
+                      alt="linkedinicon"
+                      className="h-[18px]"
+                    />
                   </div>
                 </div>
               </div>
@@ -162,19 +206,40 @@ export default function SinglementordetailsPage() {
           <div className="flex flex-row md:flex-col justify-between items-center w-full mx-auto md:gap-10 max-w-7xl">
             <div className="flex flex-col items-center justify-start w-[15%] md:w-full pb-[3px] gap-[46px]">
               <div className="flex flex-col items-center justify-start w-[97%] md:w-full gap-[22px]">
-                <Img src="images/img_logo.svg" alt="logo_three" className="h-[30px]" />
+                <Img
+                  src="images/img_logo.svg"
+                  alt="logo_three"
+                  className="h-[30px]"
+                />
                 <div className="flex flex-row justify-between items-center w-[85%] md:w-full">
-                  <Img src="images/img_facebook_logo_1.svg" alt="facebooklogoone" className="h-[22px] w-[22px]" />
-                  <Button color="deep_orange_400" size="xs" shape="circle" className="w-[36px]">
+                  <Img
+                    src="images/img_facebook_logo_1.svg"
+                    alt="facebooklogoone"
+                    className="h-[22px] w-[22px]"
+                  />
+                  <Button
+                    color="deep_orange_400"
+                    size="xs"
+                    shape="circle"
+                    className="w-[36px]"
+                  >
                     <Img src="images/img_instagram_icon.svg" />
                   </Button>
-                  <Img src="images/img_twitter_logo.svg" alt="twitterlogo" className="h-[17px]" />
-                  <Img src="images/img_linkedin_icon.svg" alt="linkedinicon" className="h-[18px]" />
+                  <Img
+                    src="images/img_twitter_logo.svg"
+                    alt="twitterlogo"
+                    className="h-[17px]"
+                  />
+                  <Img
+                    src="images/img_linkedin_icon.svg"
+                    alt="linkedinicon"
+                    className="h-[18px]"
+                  />
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                <Text as="p">©2021 Educatsy</Text>
-                <Text as="p">Educatsy is a registered</Text>
+                <Text as="p">©2021 ScholarSphere</Text>
+                <Text as="p">ScholarSphere is a registered</Text>
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-[14%] md:w-full gap-[19px]">

@@ -9,19 +9,25 @@ export default function EduviJoinAsTeacherPage() {
     <>
       <Helmet>
         <title>01fe21bcs314's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-100">
         <div className="flex flex-col items-center justify-start w-full gap-12">
           <Header className="flex justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" />
           <div className="flex flex-col items-start justify-start w-full gap-[5px] p-5 md:px-5 bg-yellow-100 max-w-7xl rounded-[20px]">
-            <Text as="p" className="mt-[5px] ml-2.5 md:ml-0 !text-black-900_02 !font-medium">
+            <Text
+              as="p"
+              className="mt-[5px] ml-2.5 md:ml-0 !text-black-900_02 !font-medium"
+            >
               Home | Become An Instructor
             </Text>
             <div className="flex flex-row md:flex-col justify-center items-center w-[99%] md:w-full ml-2.5 gap-[546px] md:gap-10 md:ml-0">
               <Heading size="2xl" as="h1" className="w-[31%] !font-semibold">
                 <>
-                  Join Educatsy as
+                  Join ScholarSphere as
                   <br />a Mentor
                 </>
               </Heading>
@@ -30,10 +36,18 @@ export default function EduviJoinAsTeacherPage() {
                   <div className="flex flex-col items-center justify-start w-full">
                     <div className="h-[201px] w-full relative">
                       <div className="flex flex-col items-start justify-center w-full h-full left-0 bottom-0 right-0 top-0 m-auto absolute">
-                        <Img src="images/img_vector_amber_200.svg" alt="vector_one" className="h-[200px] z-[1]" />
+                        <Img
+                          src="images/img_vector_amber_200.svg"
+                          alt="vector_one"
+                          className="h-[200px] z-[1]"
+                        />
                         <div className="flex flex-row justify-start items-center w-[49%] md:w-full mt-[-43px] ml-[18px] md:ml-0">
                           <div className="flex flex-row justify-start items-center w-[99%]">
-                            <Img src="images/img_group_blue_gray_900_02.svg" alt="image" className="h-[44px]" />
+                            <Img
+                              src="images/img_group_blue_gray_900_02.svg"
+                              alt="image"
+                              className="h-[44px]"
+                            />
                             <Img
                               src="images/img_vector_deep_orange_300_01.svg"
                               alt="vector_three"
@@ -49,7 +63,11 @@ export default function EduviJoinAsTeacherPage() {
                       </div>
                       <div className="flex flex-col items-start justify-start w-[30%] right-[26%] top-[15%] m-auto absolute">
                         <div className="flex flex-col items-start justify-start ml-[21px] md:ml-0 sm:ml-5 z-[1]">
-                          <Img src="images/img_vector_gray_800_01.svg" alt="vector_seven" className="h-[23px] z-[1]" />
+                          <Img
+                            src="images/img_vector_gray_800_01.svg"
+                            alt="vector_seven"
+                            className="h-[23px] z-[1]"
+                          />
                           <Img
                             src="images/img_vector_gray_800_01_14x6.svg"
                             alt="vector_nine"
@@ -103,10 +121,18 @@ export default function EduviJoinAsTeacherPage() {
                                         className="h-px w-px mt-[-3px] mr-[3px]"
                                       />
                                     </div>
-                                    <Img src="images/img_vector_gray_800.svg" alt="vector" className="h-[2px] mt-px" />
+                                    <Img
+                                      src="images/img_vector_gray_800.svg"
+                                      alt="vector"
+                                      className="h-[2px] mt-px"
+                                    />
                                   </div>
                                   <div className="flex flex-row justify-start items-center mt-[7px] ml-1 gap-[7px] md:ml-0">
-                                    <Img src="images/img_vector_red_400.svg" alt="vector" className="h-px w-px" />
+                                    <Img
+                                      src="images/img_vector_red_400.svg"
+                                      alt="vector"
+                                      className="h-px w-px"
+                                    />
                                     <Img
                                       src="images/img_vector_red_400_3x3.svg"
                                       alt="vector"
@@ -206,7 +232,11 @@ export default function EduviJoinAsTeacherPage() {
                                         alt="vector"
                                         className="h-px mr-px"
                                       />
-                                      <Img src="images/img_vector_white_a700_1x51.svg" alt="vector" className="h-px" />
+                                      <Img
+                                        src="images/img_vector_white_a700_1x51.svg"
+                                        alt="vector"
+                                        className="h-px"
+                                      />
                                     </div>
                                   </div>
                                 </div>
@@ -258,7 +288,11 @@ export default function EduviJoinAsTeacherPage() {
                                     alt="vector"
                                     className="h-[5px] mt-px"
                                   />
-                                  <Img src="images/img_vector_black_900_02_4x9.svg" alt="vector" className="h-[4px]" />
+                                  <Img
+                                    src="images/img_vector_black_900_02_4x9.svg"
+                                    alt="vector"
+                                    className="h-[4px]"
+                                  />
                                 </div>
                                 <div className="flex flex-row justify-end items-start w-full">
                                   <div className="h-[20px] w-[5px] mt-[3px] z-[1] bg-black-900_02" />
@@ -275,7 +309,11 @@ export default function EduviJoinAsTeacherPage() {
                           <div className="flex flex-row justify-end items-center w-[65%] md:w-full mt-[-98px] mr-[25px] sm:mr-5">
                             <div className="flex flex-row justify-end items-start w-[99%] z-[1]">
                               <div className="flex flex-row justify-end items-center w-[61%]">
-                                <Img src="images/img_group_red_300.svg" alt="image_four" className="h-[138px]" />
+                                <Img
+                                  src="images/img_group_red_300.svg"
+                                  alt="image_four"
+                                  className="h-[138px]"
+                                />
                                 <div className="h-[108px] w-[35%] sm:w-full ml-[-30px] relative">
                                   <Img
                                     src="images/img_vector_red_100_108x37.svg"
@@ -325,7 +363,11 @@ export default function EduviJoinAsTeacherPage() {
                               </div>
                             </div>
                             <div className="flex flex-row justify-end items-center w-[41%] ml-[-69px]">
-                              <Img src="images/img_vector_blue_gray_100.svg" alt="vector" className="h-[17px] z-[1]" />
+                              <Img
+                                src="images/img_vector_blue_gray_100.svg"
+                                alt="vector"
+                                className="h-[17px] z-[1]"
+                              />
                               <div className="h-[92px] w-[89%] sm:w-full ml-[-3px] relative">
                                 <Img
                                   src="images/img_vector_blue_gray_900_02.svg"
@@ -377,7 +419,11 @@ export default function EduviJoinAsTeacherPage() {
                           alt="vector"
                           className="h-px w-px ml-px md:ml-0"
                         />
-                        <Img src="images/img_vector_gray_800_01_2x7.svg" alt="vector" className="h-px w-px" />
+                        <Img
+                          src="images/img_vector_gray_800_01_2x7.svg"
+                          alt="vector"
+                          className="h-px w-px"
+                        />
                       </div>
                       <Img
                         src="images/img_vector_gray_800_01_24x16.svg"
@@ -390,16 +436,36 @@ export default function EduviJoinAsTeacherPage() {
                         className="h-[3px] w-[3px] mr-[73px] right-[24%] bottom-0 top-0 my-auto md:mr-5 absolute"
                       />
                       <div className="flex flex-row justify-center items-center h-[3px] w-[3px] right-[40%] top-[29%] m-auto absolute">
-                        <Img src="images/img_vector_red_400.svg" alt="vector" className="h-[3px] w-[3px]" />
-                        <Img src="images/img_vector_red_400_1x1.svg" alt="vector" className="h-px w-px ml-[-1px]" />
+                        <Img
+                          src="images/img_vector_red_400.svg"
+                          alt="vector"
+                          className="h-[3px] w-[3px]"
+                        />
+                        <Img
+                          src="images/img_vector_red_400_1x1.svg"
+                          alt="vector"
+                          className="h-px w-px ml-[-1px]"
+                        />
                       </div>
                       <div className="flex flex-col items-end justify-start w-[4%] bottom-[37%] right-[32%] m-auto absolute">
                         <div className="h-[25px] w-[3px] mr-0.5 bg-gray-400_01" />
-                        <Img src="images/img_vector_gray_400_01_3x4.svg" alt="vector" className="h-[5px] mt-[-1px]" />
+                        <Img
+                          src="images/img_vector_gray_400_01_3x4.svg"
+                          alt="vector"
+                          className="h-[5px] mt-[-1px]"
+                        />
                       </div>
                       <div className="flex flex-col items-start justify-start w-[13%] gap-[5px] right-[14%] top-[12%] m-auto absolute">
-                        <Img src="images/img_vector_white_a700_1x36.svg" alt="vector" className="h-px" />
-                        <Img src="images/img_vector_white_a700_1x34.svg" alt="vector" className="h-px ml-0.5 md:ml-0" />
+                        <Img
+                          src="images/img_vector_white_a700_1x36.svg"
+                          alt="vector"
+                          className="h-px"
+                        />
+                        <Img
+                          src="images/img_vector_white_a700_1x34.svg"
+                          alt="vector"
+                          className="h-px ml-0.5 md:ml-0"
+                        />
                       </div>
                       <Img
                         src="images/img_vector_white_a700.svg"
@@ -412,7 +478,11 @@ export default function EduviJoinAsTeacherPage() {
                         className="h-[4px] w-[4px] right-[9%] top-[12%] m-auto absolute"
                       />
                     </div>
-                    <Img src="images/img_group_black_900_02.svg" alt="image_five" className="h-px" />
+                    <Img
+                      src="images/img_group_black_900_02.svg"
+                      alt="image_five"
+                      className="h-px"
+                    />
                   </div>
                 </div>
               </div>
@@ -434,9 +504,11 @@ export default function EduviJoinAsTeacherPage() {
                   Apply As Instructor
                 </Heading>
                 <Text as="p" className="!leading-[30px]">
-                  Teaching is a vital and admirable career. As such, it comes with quite a bit of responsibility, both
-                  in practice and in preparation with many skills required to be a teacher. The following steps provide
-                  a general breakdown of the requirements for teachers:
+                  Teaching is a vital and admirable career. As such, it comes
+                  with quite a bit of responsibility, both in practice and in
+                  preparation with many skills required to be a teacher. The
+                  following steps provide a general breakdown of the
+                  requirements for teachers:
                 </Text>
               </div>
               <div className="flex flex-col items-center justify-start w-full gap-5">
@@ -478,14 +550,20 @@ export default function EduviJoinAsTeacherPage() {
                   </div>
                 </div>
               </div>
-              <Button className="sm:px-5 font-medium min-w-[143px] rounded-[10px] sm:min-w-full">Apply Now</Button>
+              <Button className="sm:px-5 font-medium min-w-[143px] rounded-[10px] sm:min-w-full">
+                Apply Now
+              </Button>
             </div>
           </div>
         </div>
         <div className="flex flex-row justify-center w-full">
           <div className="flex flex-row justify-center w-full md:px-5 max-w-7xl">
             <div className="flex flex-col items-center justify-start w-[83%] pt-[5px] gap-16">
-              <Heading size="2xl" as="h2" className="!font-metropolis text-center">
+              <Heading
+                size="2xl"
+                as="h2"
+                className="!font-metropolis text-center"
+              >
                 How to apply to join as instructor
               </Heading>
               <div className="flex flex-row justify-center w-full">

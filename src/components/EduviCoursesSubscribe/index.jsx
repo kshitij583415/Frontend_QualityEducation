@@ -9,7 +9,7 @@ export default function EduviCoursesSubscribe({
       Every New Courses
     </>
   ),
-  p20kstudents = "20k+ students daily learn with Educatsy. Subscribe for new courses.",
+  p20kstudents = "20k+ students daily learn with ScholarSphere. Subscribe for new courses.",
   subscribe = "Subscribe",
   ...props
 }) {
@@ -37,7 +37,11 @@ export default function EduviCoursesSubscribe({
           <div className="flex flex-row md:flex-col justify-between items-center w-[75%] md:w-full md:gap-10">
             <div className="flex flex-col items-center justify-start w-[66%] md:w-full gap-10">
               <div className="flex flex-col items-center justify-start w-full pb-[3px] gap-[26px]">
-                <Heading size="2xl" as="h1" className="!text-white-A700 !font-metropolis text-center leading-[55px]">
+                <Heading
+                  size="2xl"
+                  as="h1"
+                  className="!text-white-A700 !font-metropolis text-center leading-[55px]"
+                >
                   {subscribefor}
                 </Heading>
                 <Text as="p" className="!text-white-A700_b2 text-center">
@@ -51,7 +55,10 @@ export default function EduviCoursesSubscribe({
                   placeholder="enter your email"
                   className="w-[77%] md:w-full font-medium"
                 />
-                <Button size="3xl" className="sm:px-5 rounded-tr-[10px] rounded-br-[10px] font-medium min-w-[138px]">
+                <Button
+                  size="3xl"
+                  className="sm:px-5 rounded-tr-[10px] rounded-br-[10px] font-medium min-w-[138px]"
+                >
                   {subscribe}
                 </Button>
               </div>
