@@ -1,6 +1,5 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { Img, Text } from "./..";
-
 export default function AllMentorsMaincard({
   bgOne = "images/angela.jpg",
   kristinwatson = "Angela yu",
@@ -9,6 +8,7 @@ export default function AllMentorsMaincard({
 }) {
   return (
     <div {...props}>
+      <Link to="/singlementordetails">
       <div className="flex flex-col items-center justify-start h-[290px] w-[290px]">
         <Img src={bgOne} alt="bg_one" className="w-[290px] md:h-auto object-cover rounded-[10px]" />
       </div>
@@ -23,6 +23,7 @@ export default function AllMentorsMaincard({
         </div>
         <Img src="images/img_arrow_down_black_900_02.svg" alt="arrowdown_nine" className="h-[24px] w-[24px]" />
       </div>
+      </Link>
     </div>
   );
 }

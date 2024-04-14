@@ -1,14 +1,13 @@
-import React from "react";
 import { Helmet } from "react-helmet";
-import { Text, Heading, Img, Button } from "../../components";
+import { Link } from "react-router-dom";
+import { Button, Heading, Img, Text } from "../../components";
 import EduviCoursesSubscribe from "../../components/EduviCoursesSubscribe";
 import Header1 from "../../components/Header1";
-
 export default function SinglementordetailsPage() {
   return (
     <>
       <Helmet>
-        <title>01fe21bcs314's Application2</title>
+        <title>Scholar Sphere</title>
         <meta
           name="description"
           content="Web site created using create-react-app"
@@ -27,23 +26,33 @@ export default function SinglementordetailsPage() {
                         as="p"
                         className="mb-[92px] !text-black-900_02 !font-medium"
                       >
-                        Home | Mentor | Kristin Watson
+                        <div style={{ display: "inline-block" }}>
+                          <Link to="/">Home | </Link>
+                        </div>
+                        <div style={{ display: "inline-block" }}>
+                          <Link to="/allmentors"> Mentor | </Link>
+                        </div>
+                        <div style={{ display: "inline-block" }}>
+                          <a href="https://www.codewithharry.com/">
+                            Code With Harry
+                          </a>
+                        </div>
                       </Text>
                     </div>
                   </div>
                   <div className="flex flex-row justify-start w-[32%] md:w-full mt-[-81px] ml-[30px] md:ml-0 sm:ml-5">
                     <div className="flex flex-row sm:flex-col justify-start items-center w-full gap-5 sm:gap-5">
                       <Img
-                        src="images/img_bg_170x170.png"
+                        src="images/harry1.png"
                         alt="bg_one"
                         className="w-[170px] md:h-auto mb-px object-cover rounded-[10px]"
                       />
                       <div className="flex flex-col items-start justify-start w-[53%] sm:w-full gap-0.5">
                         <Text size="lg" as="p" className="!text-gray-900">
-                          Kritsin Watson
+                          Harry
                         </Text>
                         <Text size="md" as="p">
-                          Founder & Mentor
+                          Mentor
                         </Text>
                       </div>
                     </div>
@@ -55,7 +64,7 @@ export default function SinglementordetailsPage() {
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-row md:flex-col justify-start items-start w-full gap-10 md:gap-5 md:px-5 max-w-7xl">
               <div className="flex flex-col items-center justify-start w-[66%] md:w-full gap-[29px]">
-                <div className="flex flex-row md:flex-col justify-start w-full gap-6 md:gap-5">
+                {/* <div className="flex flex-row md:flex-col justify-start w-full gap-6 md:gap-5">
                   <div className="flex flex-row md:flex-col justify-start w-[79%] md:w-full gap-[19px] md:gap-5">
                     <Button
                       color="orange_200_01"
@@ -79,7 +88,7 @@ export default function SinglementordetailsPage() {
                   <Button className="sm:px-5 font-medium min-w-[160px] rounded-[10px]">
                     Contact Now
                   </Button>
-                </div>
+                </div> */}
                 <div className="flex flex-col items-center justify-start w-full gap-[29px]">
                   <div className="flex flex-col items-start justify-start w-full gap-2">
                     <Heading size="xl" as="h1">
@@ -164,7 +173,7 @@ export default function SinglementordetailsPage() {
                     Language
                   </Heading>
                   <Heading size="s" as="h5" className="text-right">
-                    English, French
+                    English, Hindi
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between items-center w-full mb-2.5">

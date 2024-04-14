@@ -4,7 +4,7 @@ const FeatureCard = () => {
         <h1 className="font-bold mt-6 mb-3" style={{textAlign:"center",fontSize: "50px"}}>Features</h1>
       <div className="flex flex-wrap justify-around">
         {/* Popular Courses */}
-        <div className="max-w-sm rounded overflow-hidden m-4 bg-teal-500 hover:bg-teal-600 transition duration-300 ease-in-out transform hover:scale-105">
+        <div className="max-w-sm rounded overflow-hidden m-4 bg-gray-100 hover:shadow-lg">
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 text-white">Popular Courses</div>
             <p className="text-gray-700 text-base" style={{textAlign:"justify"}}>
@@ -14,7 +14,7 @@ const FeatureCard = () => {
         </div>
   
         {/* Popular Books */}
-        <div className="max-w-sm rounded overflow-hidden m-4 bg-teal-500 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-105">
+        <div className="max-w-sm rounded overflow-hidden m-4 bg-gray-100 hover:shadow-lg">
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 text-white">Popular Books</div>
             <p className="text-gray-700 text-base" style={{textAlign:"justify"}}>
@@ -24,7 +24,7 @@ const FeatureCard = () => {
         </div>
   
         {/* Our Mentors */}
-        <div className="max-w-sm rounded overflow-hidden m-4 bg-teal-500 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-105">
+        <div className="max-w-sm rounded overflow-hidden m-4 bg-gray-100 hover:shadow-lg">
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 text-white">Our Mentors</div>
             <p className="text-gray-700 text-base" style={{textAlign:"justify"}}>
