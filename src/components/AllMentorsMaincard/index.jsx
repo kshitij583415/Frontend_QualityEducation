@@ -2,9 +2,9 @@ import React from "react";
 import { Img, Text } from "./..";
 
 export default function AllMentorsMaincard({
-  bgOne = "images/img_bg_290x290.png",
-  kristinwatson = "Kristin Watson",
-  foundermentor = "Founder & Mentor",
+  bgOne = "images/angela.jpg",
+  kristinwatson = "Angela yu",
+  foundermentor = "Mentor",
   ...props
 }) {
   return (

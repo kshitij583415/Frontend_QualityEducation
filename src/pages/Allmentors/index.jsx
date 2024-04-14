@@ -32,7 +32,7 @@ export default function AllmentorsPage() {
             <div className="flex flex-row md:flex-col justify-between items-center w-[99%] md:w-full ml-2.5 gap-[420px] md:gap-10 md:ml-0">
               <Heading size="2xl" as="h1" className="w-[31%] !font-semibold">
                 <>
-                  Scholar Sphere has 
+                  Scholar Sphere has
                   qualified mentors
                 </>
               </Heading>
@@ -341,35 +341,35 @@ export default function AllmentorsPage() {
                       <div className="flex flex-row md:flex-col justify-start w-full gap-10 md:gap-5">
                         <AllMentorsMaincard className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5" />
                         <AllMentorsMaincard
-                          bgOne="images/img_bg_1.png"
-                          kristinwatson="Brooklyn Simmons"
+                          bgOne="images/harry1.png"
+                          kristinwatson="Code with harry"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
                         />
                         <AllMentorsMaincard
-                          bgOne="images/img_bg_2.png"
-                          kristinwatson="Robert Fox"
+                          bgOne="images/abdul.jpg"
+                          kristinwatson="Abdul Bari"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
                         />
                         <AllMentorsMaincard
-                          bgOne="images/img_bg_3.png"
-                          kristinwatson="Wade Warren"
+                          bgOne="images/striver.jpg"
+                          kristinwatson="Take U Forward"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
                         />
                       </div>
                       <div className="flex flex-row md:flex-col justify-start w-full gap-10 md:gap-5">
-                        <AllMentorsMaincard
-                          bgOne="images/img_bg_4.png"
-                          kristinwatson="Bessie Cooper"
+                      <AllMentorsMaincard
+                          bgOne="images/harry1.png"
+                          kristinwatson="Code with harry"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
                         />
                         <AllMentorsMaincard
-                          bgOne="images/img_bg_5.png"
-                          kristinwatson="Ronald Richards"
+                          bgOne="images/abdul.jpg"
+                          kristinwatson="Abdul Bari"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
                         />
                         <AllMentorsMaincard
-                          bgOne="images/img_bg_6.png"
-                          kristinwatson="Guy Hawkins"
+                          bgOne="images/striver.jpg"
+                          kristinwatson="Take U Forward"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
                         />
                         <AllMentorsMaincard
@@ -402,21 +402,21 @@ export default function AllmentorsPage() {
                     items={[...Array(3)].map(() => (
                       <React.Fragment key={Math.random()}>
                         <div className="flex flex-row md:flex-col gap-10 mx-auto">
-                          <AllMentorsMaincard
-                            bgOne="images/img_bg_8.png"
-                            kristinwatson="Theresa Webb"
-                            className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
-                          />
-                          <AllMentorsMaincard
-                            bgOne="images/img_bg_9.png"
-                            kristinwatson="Cody Fisher"
-                            className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
-                          />
-                          <AllMentorsMaincard
-                            bgOne="images/img_bg_10.png"
-                            kristinwatson="Courtney Henry"
-                            className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
-                          />
+                        <AllMentorsMaincard
+                          bgOne="images/harry1.png"
+                          kristinwatson="Code with harry"
+                          className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
+                        />
+                        <AllMentorsMaincard
+                          bgOne="images/abdul.jpg"
+                          kristinwatson="Abdul Bari"
+                          className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
+                        />
+                        <AllMentorsMaincard
+                          bgOne="images/striver.jpg"
+                          kristinwatson="Take U Forward"
+                          className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
+                        />
                           <AllMentorsMaincard
                             bgOne="images/img_bg_11.png"
                             kristinwatson="Jerome Bell"
