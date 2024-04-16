@@ -1,8 +1,7 @@
-import React from "react";
-import { Text, Heading, Img, Button } from "./..";
+import { Button, Heading, Img, Text } from "./..";
 
 export default function EduviCoursesFooter({
-  p2021ScholarSphere = "©2021 ScholarSphere",
+  p2024ScholarSphere = "©2024 ScholarSphere",
   ScholarSphereisa = "ScholarSphere is a registered",
   coursesOne = "Courses",
   classroom = "Classroom courses",
@@ -70,7 +69,7 @@ export default function EduviCoursesFooter({
             </div>
           </div>
           <div className="flex flex-col items-start justify-start w-full gap-3.5">
-            <Text as="p">{p2021ScholarSphere}</Text>
+            <Text as="p">{p2024ScholarSphere}</Text>
             <Text as="p">{ScholarSphereisa}</Text>
           </div>
         </div>

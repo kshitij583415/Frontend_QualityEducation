@@ -92,7 +92,7 @@ export default function SinglementordetailsPage() {
                 <div className="flex flex-col items-center justify-start w-full gap-[29px]">
                   <div className="flex flex-col items-start justify-start w-full gap-2">
                     <Heading size="xl" as="h1">
-                      About Kritsin
+                      About Harry
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
                       <>
@@ -247,7 +247,7 @@ export default function SinglementordetailsPage() {
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                <Text as="p">©2021 ScholarSphere</Text>
+                <Text as="p">©2024 ScholarSphere</Text>
                 <Text as="p">ScholarSphere is a registered</Text>
               </div>
             </div>

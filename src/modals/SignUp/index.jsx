@@ -1,6 +1,6 @@
 import React from "react";
 import { default as ModalProvider } from "react-modal";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link, useNavigate } from "react-router-dom"; // Import Link from react-router-dom
 import { Button, Img, Input, Text } from "../../components";
 import { CheckBox } from "../../components/CheckBox";
 import SignUpInputfield from "../../components/SignUpInputfield";
@@ -8,6 +8,10 @@ import SignUpInputfield from "../../components/SignUpInputfield";
 export default function SignUp({ isOpen, ...props }) {
   const [sliderState, setSliderState] = React.useState(0);
   const sliderRef = React.useRef(null);
+  const navigate=useNavigate();
+  const navigation=()=>{
+      navigate("/login");
+  }
 
   return (
     <ModalProvider {...props} appElement={document.getElementById("root")} isOpen={true} className="min-w-[1052px]">
@@ -74,7 +78,7 @@ export default function SignUp({ isOpen, ...props }) {
                         className="w-full sm:w-full gap-[15px] rounded-tr-[10px] rounded-br-[10px] border-gray-300 border border-solid"
                       />
                     </div>
-                    <Button className="w-full mt-[30px] sm:px-5 font-medium rounded-[10px]">Sign up</Button>
+                    <Button className="w-full mt-[30px] sm:px-5 font-medium rounded-[10px]" onClick={navigation}>Sign up</Button>
                     <CheckBox
                       shape="square"
                       name="checked24outlin"

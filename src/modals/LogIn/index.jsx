@@ -1,7 +1,7 @@
 // LogIn.js
 import React from "react";
 import { default as ModalProvider } from "react-modal";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Img, Input, Text } from "../../components";
 import { CheckBox } from "../../components/CheckBox";
 import SignUpInputfield from "../../components/SignUpInputfield";
@@ -9,7 +9,10 @@ import SignUpInputfield from "../../components/SignUpInputfield";
 export default function LogIn({ isOpen, ...props }) {
   const [sliderState, setSliderState] = React.useState(0);
   const sliderRef = React.useRef(null);
-
+  const navigate=useNavigate();
+  const navigation=()=>{
+    navigate("/");
+  }
   return (
     <ModalProvider
       {...props}
@@ -79,7 +82,7 @@ export default function LogIn({ isOpen, ...props }) {
                         />
                       </div>
                     </div>
-                    <Button className="w-full mt-[30px] sm:px-5 bg-blue-350 text-white font-medium rounded-[10px]">
+                    <Button className="w-full mt-[30px] sm:px-5 bg-blue-350 text-white font-medium rounded-[10px]" onClick={navigation}>
                       Sign In
                     </Button>
                     <div className="flex flex-row justify-between items-center w-full mt-6 py-[3px]">

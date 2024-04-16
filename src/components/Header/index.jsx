@@ -26,7 +26,7 @@ export default function Header({ ...props }) {
             <Img src="images/img_profile_24_outline.svg" alt="profiletwentyfo" className="h-[30px] w-[30px] ml-6" />
             <Text as="p" className="text-gray-900 font-medium">
               <Link to='/login'>
-                Login/Register
+                Login
               </Link>
             </Text>
           </div>

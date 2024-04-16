@@ -28,7 +28,7 @@ export default function EduviShopPage() {
   return (
     <>
       <Helmet>
-        <title>Kshitij's Edu4U</title>
+        <title>Scholar Sphere</title>
         <meta
           name="description"
           content="Web site created using create-react-app"

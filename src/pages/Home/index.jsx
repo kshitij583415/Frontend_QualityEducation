@@ -1,10 +1,9 @@
+import EduviCoursesSubscribe from "components/EduviCoursesSubscribe";
 import FeatureCard from "components/Features";
 import Testimonials from "pages/Testimonials";
 import Vision from "pages/Vision";
+import { Button, Heading, Img, Text } from "../../components";
 import Header from "../../components/Header";
-import React from "react";
-import EduviCoursesSubscribe from "components/EduviCoursesSubscribe";
-import { Heading, Img, Slider, Text, Button } from "../../components";
 
 export default function HomePage() {
   return (
@@ -46,7 +45,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center justify-start w-[15%] md:w-full pb-[3px] gap-[46px]">
             <div className="flex flex-col items-center justify-start w-[97%] md:w-full gap-[22px]">
               <Img
-                src="images/img_logo.svg"
+                src="images/logo.jpg"
                 alt="logo_three"
                 className="h-[30px]"
               />
@@ -77,7 +76,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-              <Text as="p">©2021 ScholarSphere</Text>
+              <Text as="p">©2024 ScholarSphere</Text>
               <Text as="p">ScholarSphere is a registered</Text>
             </div>
           </div>

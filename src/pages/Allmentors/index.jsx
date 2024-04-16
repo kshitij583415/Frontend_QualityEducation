@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { Link } from "react-router-dom";
+import { TabPanel, Tabs } from "react-tabs";
 import { Heading, Img, Slider, Text } from "../../components";
 import AllMentorsMaincard from "../../components/AllMentorsMaincard";
 import Footer from "../../components/Footer";
@@ -13,7 +14,7 @@ export default function AllmentorsPage() {
   return (
     <>
       <Helmet>
-        <title>Edu4U</title>
+        <title>Scholar Sphere</title>
         <meta
           name="description"
           content="Web site created using create-react-app"
@@ -27,7 +28,15 @@ export default function AllmentorsPage() {
               as="p"
               className="mt-[5px] ml-2.5 md:ml-0 !text-black-900_02 !font-medium"
             >
-              Home | Our Mentors
+              <span style={{display:"inline-block"}}>
+                <Link to="/">Home | </Link> 
+              </span>
+              <span style={{display:"inline-block"}}>
+                <Link to="/allmentors">Our Mentors | </Link> 
+              </span>
+              <span style={{display:"inline-block"}}>
+                <Link to="/eduvijoinasteacher">Join as a Mentor</Link>
+              </span>
             </Text>
             <div className="flex flex-row md:flex-col justify-between items-center w-[99%] md:w-full ml-2.5 gap-[420px] md:gap-10 md:ml-0">
               <Heading size="2xl" as="h1" className="w-[31%] !font-semibold">
@@ -357,7 +366,7 @@ export default function AllmentorsPage() {
                         />
                       </div>
                       <div className="flex flex-row md:flex-col justify-start w-full gap-10 md:gap-5">
-                      <AllMentorsMaincard
+                        <AllMentorsMaincard
                           bgOne="images/harry1.png"
                           kristinwatson="Code with harry"
                           className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
@@ -402,21 +411,21 @@ export default function AllmentorsPage() {
                     items={[...Array(3)].map(() => (
                       <React.Fragment key={Math.random()}>
                         <div className="flex flex-row md:flex-col gap-10 mx-auto">
-                        <AllMentorsMaincard
-                          bgOne="images/harry1.png"
-                          kristinwatson="Code with harry"
-                          className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
-                        />
-                        <AllMentorsMaincard
-                          bgOne="images/abdul.jpg"
-                          kristinwatson="Abdul Bari"
-                          className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
-                        />
-                        <AllMentorsMaincard
-                          bgOne="images/striver.jpg"
-                          kristinwatson="Take U Forward"
-                          className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
-                        />
+                          <AllMentorsMaincard
+                            bgOne="images/harry1.png"
+                            kristinwatson="Code with harry"
+                            className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
+                          />
+                          <AllMentorsMaincard
+                            bgOne="images/abdul.jpg"
+                            kristinwatson="Abdul Bari"
+                            className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
+                          />
+                          <AllMentorsMaincard
+                            bgOne="images/striver.jpg"
+                            kristinwatson="Take U Forward"
+                            className="flex flex-col items-center justify-start w-[23%] md:w-full gap-2.5"
+                          />
                           <AllMentorsMaincard
                             bgOne="images/img_bg_11.png"
                             kristinwatson="Jerome Bell"
