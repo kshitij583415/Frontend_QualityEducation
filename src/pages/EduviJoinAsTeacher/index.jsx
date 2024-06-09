@@ -1,6 +1,5 @@
-import React from "react";
 import { Helmet } from "react-helmet";
-import { Img, Heading, Button, Text } from "../../components";
+import { Button, Heading, Img, Text } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -8,7 +7,7 @@ export default function EduviJoinAsTeacherPage() {
   return (
     <>
       <Helmet>
-        <title>01fe21bcs314's Application2</title>
+        <title>Scholar Sphere</title>
         <meta
           name="description"
           content="Web site created using create-react-app"

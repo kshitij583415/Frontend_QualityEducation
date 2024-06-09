@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { CloseSVG } from "../../assets/images";
 import { Heading, Img, Input, Text } from "../../components";
@@ -6,19 +6,17 @@ import EduviCoursesDetailsMaincard1 from "../../components/EduviCoursesDetailsMa
 import EduviCoursesEight from "../../components/EduviCoursesEight";
 import EduviCoursesEleven from "../../components/EduviCoursesEleven";
 import EduviCoursesFive from "../../components/EduviCoursesFive";
-import EduviCoursesFooter from "../../components/EduviCoursesFooter";
 import EduviCoursesFour from "../../components/EduviCoursesFour";
 import EduviCoursesNine from "../../components/EduviCoursesNine";
 import EduviCoursesOne from "../../components/EduviCoursesOne";
 import EduviCoursesSeven from "../../components/EduviCoursesSeven";
 import EduviCoursesSix from "../../components/EduviCoursesSix";
-import EduviCoursesSubscribe from "../../components/EduviCoursesSubscribe";
 import EduviCoursesTen from "../../components/EduviCoursesTen";
 import EduviCoursesThree from "../../components/EduviCoursesThree";
 import EduviCoursesTwo from "../../components/EduviCoursesTwo";
+import Footer from "../../components/Footer";
 import Header1 from "../../components/Header1";
 import { SelectBox } from "../../components/SelectBox";
-import Footer from "../../components/Footer";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -28,7 +26,23 @@ const dropDownOptions = [
 
 export default function EduviCoursesPage() {
   const [searchBarValue7, setSearchBarValue7] = React.useState("");
-
+  const [otherCourses,setotherCourses]=React.useState([]);
+  // const [otherCourses,setotherCourses]=React.useState([]);
+  // const [otherCourses,setotherCourses]=React.useState([]);
+  // const [otherCourses,setotherCourses]=React.useState([]);
+  // const [otherCourses,setotherCourses]=React.useState([]);
+  // const [otherCourses,setotherCourses]=React.useState([]);
+  useEffect(()=>{
+    const fetchCourses=async()=>{
+      try{
+      const res=await fetch("http://localhost:9090/getAllCourses");
+      const data=await res.json();
+      setotherCourses(data.filter(course=>course.standard==="other"));
+      }
+      catch(err) {console.log(err)}
+    };
+    fetchCourses();
+  },[])
   return (
     <>
       <Helmet>
@@ -578,32 +592,6 @@ export default function EduviCoursesPage() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-start w-full gap-[47px]">
-          {/* <div className="flex flex-row md:flex-col justify-start w-full gap-5 md:px-5 max-w-7xl">
-            <Button color="white_A700" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
-              All Courses
-            </Button>
-            <Button color="white_A700" className="font-medium min-w-[142px] rounded-[10px]">
-              Kindergarten
-            </Button>
-            <Button color="orange_200_01" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
-              High School
-            </Button>
-            <Button color="white_A700" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
-              College
-            </Button>
-            <Button color="white_A700" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
-              Computer
-            </Button>
-            <Button color="white_A700" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
-              Science
-            </Button>
-            <Button color="white_A700" className="sm:px-5 font-medium min-w-[142px] rounded-[10px]">
-              Engineering
-            </Button>
-            <Button color="white_A700" className="!text-deep_orange-400 font-medium min-w-[142px] rounded-[10px]">
-              More Courses
-            </Button>
-          </div> */}
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-start justify-start w-full gap-[23px] md:px-5 max-w-7xl">
               <Heading size="xl" as="h2">
@@ -676,22 +664,12 @@ export default function EduviCoursesPage() {
                 </div>
               </div>
               <div className="justify-center w-full gap-10 grid-cols-2 md:grid-cols-1 md:gap-5 grid">
-                <EduviCoursesDetailsMaincard1
+                {/*<EduviCoursesDetailsMaincard1
                   imageOne="images/img_image_103x160.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
                 {/* <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
-                <EduviCoursesDetailsMaincard1
-                  imageOne="images/img_image_2.png"
-                  className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
-                />
-                <EduviCoursesDetailsMaincard1
-                  imageOne="images/img_image_3.png"
-                  className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
-                />
-                {/* <EduviCoursesDetailsMaincard className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 shadow-xs cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
-                {/* <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
-                <EduviCoursesDetailsMaincard1
+                {/* <EduviCoursesDetailsMaincard1
                   imageOne="images/img_image_2.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
@@ -700,29 +678,26 @@ export default function EduviCoursesPage() {
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
                 <EduviCoursesDetailsMaincard1
-                  imageOne="images/img_image_103x160.png"
+                  imageOne="images/img_image_2.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                 />
-                {/* <EduviCoursesDetailsMaincard1 className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs" /> */}
+                <EduviCoursesDetailsMaincard1
+                  imageOne="images/img_image_3.png"
+                  className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
+                />
+                <EduviCoursesDetailsMaincard1
+                  imageOne="images/img_image_103x160.png"
+                  className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
+                />*/} 
+                {otherCourses.map((course,index)=>(
+                  <EduviCoursesDetailsMaincard1 
+                  key={index}
+                  imageOne="images/img_image_103x160.png"
+                  className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
+                  />
+                ))}
               </div>
             </div>
-            {/* <div className="flex flex-row justify-start items-center w-full pl-[497px] pr-14 gap-[19px] md:px-5">
-              <Button color="white_A700" size="lg" shape="round" className="w-[44px] !rounded-md">
-                <Img src="images/img_arrow_left.svg" />
-              </Button>
-              <Text as="p" className="!text-gray-900 !font-medium">
-                Page
-              </Text>
-              <Button color="white_A700" size="sm" className="!text-gray-700_01 font-medium min-w-[42px] rounded-lg">
-                5
-              </Button>
-              <Text as="p" className="!text-gray-900 !font-medium">
-                of 80
-              </Text>
-              <Button size="lg" shape="round" className="w-[44px] !rounded-md">
-                <Img src="images/img_arrow_right.svg" />
-              </Button>
-            </div> */}
           </div>
         </div>
         <Footer className="flex flex-col items-center justify-center w-full" />

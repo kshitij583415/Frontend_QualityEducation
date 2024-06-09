@@ -44,7 +44,7 @@ const ProjectRoutes = () => {
       element: <Allmentors />,
     },
     {
-      path: "singlementordetails",
+      path: "singlementordetails/:id",
       element: <Singlementordetails />,
     },
     // {

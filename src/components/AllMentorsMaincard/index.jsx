@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom";
 import { Img, Text } from "./..";
 export default function AllMentorsMaincard({
-  bgOne = "images/angela.jpg",
-  kristinwatson = "Angela yu",
+  id,imageUrl,fullName,
   foundermentor = "Mentor",
   ...props
 }) {
   return (
     <div {...props}>
-      <Link to="/singlementordetails">
-      <div className="flex flex-col items-center justify-start h-[290px] w-[290px]">
-        <Img src={bgOne} alt="bg_one" className="w-[290px] md:h-auto object-cover rounded-[10px]" />
+      <Link to={`/singlementordetails/${id}`}>
+      <div className="flex flex-col items-center justify-start w-[290px]">
+        <Img src={imageUrl} alt="bg_one" className="w-[290px] md:h-auto object-cover rounded-[10px] h-[250px]" />
       </div>
       <div className="flex flex-row justify-start items-start w-full gap-6">
         <div className="flex flex-col items-start justify-start w-[84%] pt-[5px] gap-[13px]">
           <Text as="p" className="!text-black-900_02 !font-medium">
-            {kristinwatson}
+            {fullName}
           </Text>
           <Text size="xs" as="p">
             {foundermentor}

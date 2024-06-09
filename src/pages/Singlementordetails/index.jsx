@@ -1,18 +1,33 @@
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Button, Heading, Img, Text } from "../../components";
 import EduviCoursesSubscribe from "../../components/EduviCoursesSubscribe";
 import Header1 from "../../components/Header1";
+
 export default function SinglementordetailsPage() {
+  const { id } = useParams();
+  const [mentor, setMentor] = useState(null);
+
+  useEffect(() => {
+    const fetchMentor = async () => {
+      try {
+        const res = await fetch(`http://localhost:9090/getMentor/${id}`);
+        const data = await res.json();
+        setMentor(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchMentor();
+  }, [id]);
+
+  if (!mentor) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
-      <Helmet>
-        <title>Scholar Sphere</title>
-        <meta
-          name="description"
-          content="Web site created using create-react-app"
-        />
-      </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-100">
         <div className="flex flex-col items-center justify-start w-full gap-[60px]">
           <div className="flex flex-col items-center justify-start w-full gap-12">
@@ -43,13 +58,13 @@ export default function SinglementordetailsPage() {
                   <div className="flex flex-row justify-start w-[32%] md:w-full mt-[-81px] ml-[30px] md:ml-0 sm:ml-5">
                     <div className="flex flex-row sm:flex-col justify-start items-center w-full gap-5 sm:gap-5">
                       <Img
-                        src="images/harry1.png"
+                        src={mentor.image || ""}
                         alt="bg_one"
                         className="w-[170px] md:h-auto mb-px object-cover rounded-[10px]"
                       />
                       <div className="flex flex-col items-start justify-start w-[53%] sm:w-full gap-0.5">
                         <Text size="lg" as="p" className="!text-gray-900">
-                          Harry
+                          {mentor.name || "Harry"}
                         </Text>
                         <Text size="md" as="p">
                           Mentor
@@ -64,49 +79,16 @@ export default function SinglementordetailsPage() {
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-row md:flex-col justify-start items-start w-full gap-10 md:gap-5 md:px-5 max-w-7xl">
               <div className="flex flex-col items-center justify-start w-[66%] md:w-full gap-[29px]">
-                {/* <div className="flex flex-row md:flex-col justify-start w-full gap-6 md:gap-5">
-                  <div className="flex flex-row md:flex-col justify-start w-[79%] md:w-full gap-[19px] md:gap-5">
-                    <Button
-                      color="orange_200_01"
-                      className="sm:px-5 font-medium min-w-[205px] rounded-[10px]"
-                    >
-                      About
-                    </Button>
-                    <Button
-                      color="white_A700"
-                      className="sm:px-5 font-medium min-w-[205px] rounded-[10px]"
-                    >
-                      Courses
-                    </Button>
-                    <Button
-                      color="white_A700"
-                      className="sm:px-5 font-medium min-w-[205px] rounded-[10px]"
-                    >
-                      Reviews
-                    </Button>
-                  </div>
-                  <Button className="sm:px-5 font-medium min-w-[160px] rounded-[10px]">
-                    Contact Now
-                  </Button>
-                </div> */}
                 <div className="flex flex-col items-center justify-start w-full gap-[29px]">
                   <div className="flex flex-col items-start justify-start w-full gap-2">
                     <Heading size="xl" as="h1">
-                      About Harry
+                      About 
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
                       <>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                        Risus commodo viverra maecenas accumsan lacus vel
-                        facilisis consectetur adipiscing elit.
+                        {mentor.about}
                         <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                        Risus commodo viverra maecenas accumsan lacus vel
-                        facilisis consectetur adipiscing elit.
+                        {mentor.about}
                       </>
                     </Text>
                   </div>
@@ -115,11 +97,7 @@ export default function SinglementordetailsPage() {
                       Certification
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                      commodo viverra maecenas accumsan lacus vel facilisis
-                      consectetur adipiscing elit.
+                      {mentor.certification}
                     </Text>
                   </div>
                 </div>
@@ -134,7 +112,7 @@ export default function SinglementordetailsPage() {
                     as="h4"
                     className="!text-deep_orange-400 text-right"
                   >
-                    30
+                    {mentor.totalCourses}
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between w-full">
@@ -157,7 +135,7 @@ export default function SinglementordetailsPage() {
                     Experiences
                   </Heading>
                   <Heading size="s" as="h5" className="text-right">
-                    10 Years
+                    {mentor.exp} Years
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between w-full">
@@ -165,7 +143,7 @@ export default function SinglementordetailsPage() {
                     Graduated
                   </Heading>
                   <Heading size="s" as="h5" className="text-right">
-                    Yes
+                    {mentor.graduated ? "Yes" : "No"}
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between w-full">
@@ -173,7 +151,7 @@ export default function SinglementordetailsPage() {
                     Language
                   </Heading>
                   <Heading size="s" as="h5" className="text-right">
-                    English, Hindi
+                    {mentor.language}
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between items-center w-full mb-2.5">
