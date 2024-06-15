@@ -1,12 +1,18 @@
 import React from "react";
 import { Button, Text, Heading, Img } from "./..";
+import { useNavigate } from "react-router-dom";
 
 export default function EduviCoursesEight({
-  standardone = "Standard Eight",
+  standard = "Standard Eight",
   standard1isa = "Standard 8 Course from NCERT Solutions help students to understand...",
   classDetails = "Class Details",
   ...props
 }) {
+  const navigate = useNavigate();
+  const navigateCourses = () => {
+    navigate("/courseDet", { state: { standard } });
+  }
+
   return (
     <div {...props}>
       <div className="flex flex-col items-center justify-center w-full gap-[25px] p-[15px] bg-white-A700 rounded-[15px]">
@@ -14,7 +20,7 @@ export default function EduviCoursesEight({
           <Img src="images/8.png" alt="image" className="h-[50px] w-[50px]" />
           <div className="flex flex-col items-center justify-start w-full gap-[7px]">
             <Heading size="lg" as="h1" className="text-center">
-              {standardone}
+              {standard}
             </Heading>
             <Text as="p" className="text-center !leading-[30px]">
               {standard1isa}
@@ -26,6 +32,7 @@ export default function EduviCoursesEight({
           variant="outline"
           shape="round"
           className="mb-[15px] sm:px-5 font-medium min-w-[159px] sm:min-w-full"
+          onClick={navigateCourses}
         >
           {classDetails}
         </Button>

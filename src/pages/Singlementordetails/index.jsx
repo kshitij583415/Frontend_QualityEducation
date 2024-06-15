@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button, Heading, Img, Text } from "../../components";
 import EduviCoursesSubscribe from "../../components/EduviCoursesSubscribe";
-import Header1 from "../../components/Header1";
+import Header from "../../components/Header";
+import { useLocation } from "react-router-dom";
 
 export default function SinglementordetailsPage() {
   const { id } = useParams();
@@ -21,6 +22,8 @@ export default function SinglementordetailsPage() {
 
     fetchMentor();
   }, [id]);
+  const location = useLocation();
+  const { fullName } = location.state || "Harry";
 
   if (!mentor) {
     return <div>Loading...</div>;
@@ -31,7 +34,7 @@ export default function SinglementordetailsPage() {
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-100">
         <div className="flex flex-col items-center justify-start w-full gap-[60px]">
           <div className="flex flex-col items-center justify-start w-full gap-12">
-            <Header1 className="flex flex-row justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" />
+            <Header className="flex justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" />
             <div className="flex flex-row justify-center w-full">
               <div className="flex flex-row justify-center w-full md:px-5 max-w-7xl">
                 <div className="flex flex-col items-start justify-start w-full">
@@ -64,7 +67,7 @@ export default function SinglementordetailsPage() {
                       />
                       <div className="flex flex-col items-start justify-start w-[53%] sm:w-full gap-0.5">
                         <Text size="lg" as="p" className="!text-gray-900">
-                          {mentor.name || "Harry"}
+                          {fullName || "Harry"}
                         </Text>
                         <Text size="md" as="p">
                           Mentor
@@ -82,13 +85,13 @@ export default function SinglementordetailsPage() {
                 <div className="flex flex-col items-center justify-start w-full gap-[29px]">
                   <div className="flex flex-col items-start justify-start w-full gap-2">
                     <Heading size="xl" as="h1">
-                      About 
+                      About
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
                       <>
                         {mentor.about}
                         <br />
-                        {mentor.about}
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
                       </>
                     </Text>
                   </div>
@@ -97,7 +100,11 @@ export default function SinglementordetailsPage() {
                       Certification
                     </Heading>
                     <Text as="p" className="!leading-[30px]">
-                      {mentor.certification}
+                      <>
+                        {mentor.certification}
+                        <br />
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      </>
                     </Text>
                   </div>
                 </div>
@@ -127,7 +134,7 @@ export default function SinglementordetailsPage() {
                     />
                   </div>
                   <Heading size="s" as="h6" className="text-right">
-                    4.9(153)
+                    {mentor.rating}(153)
                   </Heading>
                 </div>
                 <div className="flex flex-row justify-between w-full">

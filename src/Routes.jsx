@@ -9,6 +9,7 @@ import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import Singlementordetails from "pages/Singlementordetails";
 import { useRoutes } from "react-router-dom";
+import CourseDet from "pages/curseDet";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -47,10 +48,11 @@ const ProjectRoutes = () => {
       path: "singlementordetails/:id",
       element: <Singlementordetails />,
     },
-    // {
-    //   path: "signup",
-    //   element: <Si
-    // }
+    {
+      path: "courseDet",
+      element: <CourseDet />,
+    },
+   
   ]);
 
   return element;

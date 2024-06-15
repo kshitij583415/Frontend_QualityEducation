@@ -448,7 +448,7 @@ export default function EduviShopPage() {
                         {book.title}
                       </Heading>
                       <Heading as="h4" className="!text-red-300_01">
-                        ₹{book.price}
+                        ₹40
                       </Heading>
                     </div>
                   </div>
@@ -483,7 +483,7 @@ export default function EduviShopPage() {
                         {book.title}
                       </Heading>
                       <Heading as="h6" className="!text-red-300_01">
-                        ₹{book.price}
+                        ₹50
                       </Heading>
                     </div>
                   </div>
@@ -492,11 +492,11 @@ export default function EduviShopPage() {
             </div>
           </div>
           <div className="justify-center w-full gap-[15px] grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 grid">
-              {books.map((book) => (
-                <EduviShopTwo key={book.id} bookId={book.id}
+            {books.map((book) => (
+              <EduviShopTwo key={book.id} bookId={book.id}
                 className="flex flex-col items-center justify-start w-full gap-2"
-                 />
-              ))}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -26,23 +26,23 @@ const dropDownOptions = [
 
 export default function EduviCoursesPage() {
   const [searchBarValue7, setSearchBarValue7] = React.useState("");
-  const [otherCourses,setotherCourses]=React.useState([]);
+  const [otherCourses, setotherCourses] = React.useState([]);
   // const [otherCourses,setotherCourses]=React.useState([]);
   // const [otherCourses,setotherCourses]=React.useState([]);
   // const [otherCourses,setotherCourses]=React.useState([]);
   // const [otherCourses,setotherCourses]=React.useState([]);
   // const [otherCourses,setotherCourses]=React.useState([]);
-  useEffect(()=>{
-    const fetchCourses=async()=>{
-      try{
-      const res=await fetch("http://localhost:9090/getAllCourses");
-      const data=await res.json();
-      setotherCourses(data.filter(course=>course.standard==="other"));
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await fetch("http://localhost:9090/getAllCourses");
+        const data = await res.json();
+        setotherCourses(data.filter(course => course.standard === "other"));
       }
-      catch(err) {console.log(err)}
+      catch (err) { console.log(err) }
     };
     fetchCourses();
-  },[])
+  }, [])
   return (
     <>
       <Helmet>
@@ -688,12 +688,13 @@ export default function EduviCoursesPage() {
                 <EduviCoursesDetailsMaincard1
                   imageOne="images/img_image_103x160.png"
                   className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
-                />*/} 
-                {otherCourses.map((course,index)=>(
-                  <EduviCoursesDetailsMaincard1 
-                  key={index}
-                  imageOne="images/img_image_103x160.png"
-                  className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
+                />*/}
+                {otherCourses.map((course, index) => (
+                  <EduviCoursesDetailsMaincard1
+                    key={index}
+                    imageOne={course.image}
+                    thethree={course.courseName}
+                    className="flex flex-row justify-start w-full gap-6 p-[15px] bg-white-A700 cursor-pointer rounded-[10px] hover:shadow-xs"
                   />
                 ))}
               </div>
