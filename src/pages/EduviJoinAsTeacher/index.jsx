@@ -1,9 +1,15 @@
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 import { Button, Heading, Img, Text } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 export default function EduviJoinAsTeacherPage() {
+  const navigate = useNavigate();
+  const handleClick=()=>{
+    navigate("/mentorForm")
+  }
+
   return (
     <>
       <Helmet>
@@ -549,7 +555,7 @@ export default function EduviJoinAsTeacherPage() {
                   </div>
                 </div>
               </div>
-              <Button className="sm:px-5 font-medium min-w-[143px] rounded-[10px] sm:min-w-full">
+              <Button className="sm:px-5 font-medium min-w-[143px] rounded-[10px] sm:min-w-full" onClick={handleClick}>
                 Apply Now
               </Button>
             </div>

@@ -122,12 +122,14 @@
 //     </ModalProvider>
 //   );
 // }
-import React, { useState } from "react";
+import { useState } from "react";
 import { default as ModalProvider } from "react-modal";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import { Button, Img, Input, Text } from "../../components";
 import { CheckBox } from "../../components/CheckBox";
 import SignUpInputfield from "../../components/SignUpInputfield";
+
 
 export default function LogIn({ isOpen, ...props }) {
   const [email, setEmail] = useState('');
@@ -151,15 +153,19 @@ export default function LogIn({ isOpen, ...props }) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, password }),
+        credentials: 'include',
       });
 
       if (response.ok) {
+        toast.success("Login Successfull")
         navigate('/');
       } else {
         setErrorMessage('Invalid credentials');
+        toast.error("Invalid credentials")
       }
     } catch (error) {
       setErrorMessage('An error occurred. Please try again.');
+      toast.error("An error occurred. Please try again.")
     }
   };
 

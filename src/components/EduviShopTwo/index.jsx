@@ -51,10 +51,23 @@ export default function EduviShopTwo({ bookId, ...props }) {
     fetchBook();
   }, [bookId]);
 
+  const handleDownload = () => {
+    const fileUrl = "../new.pdf";  // Check the constructed URL
+    console.log("Downloading:", fileUrl);
+  
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = `${book.title}.pdf`;
+  
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   if (!book) return <div>Loading...</div>;
 
   return (
-    <div {...props}>
+    <div {...props} onClick={handleDownload}>
       <div className="flex flex-col items-center justify-start w-full md:h-auto p-5 bg-white-A700 rounded-[10px]">
         <div className="flex flex-col items-center justify-start w-full md:px-5 max-w-[230px] h-[150px]">
           <Img
@@ -68,7 +81,7 @@ export default function EduviShopTwo({ bookId, ...props }) {
         <Heading as="h1">{book.title}</Heading>
         <div className="flex flex-row justify-between items-center w-full">
           <Heading as="h2" className="!text-red-300_01">
-            ₹99
+            ₹98
           </Heading>
           <RatingBar
             value={book.rating}
