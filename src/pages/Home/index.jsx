@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 export default function HomePage() {
   return (
     <>
-      <Header className="flex justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" />
+      {/* <Header className="flex justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" /> */}
       {/* Hero Section */}
       <section className="relative h-[85vh]">
         <img

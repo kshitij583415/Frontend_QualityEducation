@@ -57,13 +57,14 @@
 //       path: "mentorForm",
 //       element: <MentorForm />,
 //     },
-   
+
 //   ]);
 
 //   return element;
 // };
 
 // export default ProjectRoutes;
+
 import Header from "components/Header";
 import LogIn from "modals/LogIn";
 import SignUp from "modals/SignUp";
@@ -85,47 +86,40 @@ const ProjectRoutes = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    // Simulating user login status based on a cookie (replace with actual logic)
-    const cookieValue = document.cookie
-      .split('; ')
-      .find(row => row.startsWith('user='));
+useEffect(() => {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find(row => row.startsWith("user="))
+    ?.split("=")[1];
 
-    setIsLoggedIn(cookieValue ? true : false);
-  }, []);
+  console.log('Cookie Value:', cookieValue);
+  setIsLoggedIn(!!cookieValue);
+}, [location]);
+
 
   const handleLogout = () => {
-    // Simulating logout by removing the "user" cookie
+    // Simulate logout by removing the "user" cookie
     document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setIsLoggedIn(false);
     navigate("/");
   };
 
-  const PrivateRoute = ({ element, ...props }) => {
-    if (["/", "/login", "/signup"].includes(location.pathname)) {
-      // Allow access to unprotected routes
-      return <Route {...props} element={element} />;
-    } else {
-      // Redirect to login if not logged in
-      return isLoggedIn ? (
-        // Render the protected route if logged in
-        <Route {...props} element={element} />
-      ) : (
-        // Redirect to login with redirect state if not logged in
-        <Navigate to="/login" state={{ from: location.pathname }} />
-      );
-    }
+  const PrivateRoute = ({ element }) => {
+    return isLoggedIn ? element : <Navigate to="/login" state={{ from: location.pathname }} />;
+  };
+  const PrivateRoute2 = ({ element }) => {
+    return !isLoggedIn ? element : <Navigate to="/" state={{ from: location.pathname }} />;
   };
 
   return (
     <>
-      {location.pathname !== '/' && location.pathname !== '/login' && location.pathname !== '/signup' && (
-        <Header isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <Header isLoggedIn={isLoggedIn} handleLogout={handleLogout} className="flex justify-center items-center w-full md:h-auto p-[22px] sm:p-5 bg-gray-100" />
       )}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<PrivateRoute2 element={<LogIn />} />} />
+        <Route path="/signup" element={<PrivateRoute2 element={<SignUp />} />} />
         <Route path="/allmentors" element={<PrivateRoute element={<Allmentors />} />} />
         <Route path="/eduvicourses" element={<PrivateRoute element={<EduviCourses />} />} />
         <Route path="/coursesdetail" element={<PrivateRoute element={<EduviCoursesDetails />} />} />
@@ -141,3 +135,4 @@ const ProjectRoutes = () => {
 };
 
 export default ProjectRoutes;
+

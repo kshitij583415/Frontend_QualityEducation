@@ -51,7 +51,7 @@ export default function Header({ isLoggedIn, handleLogout, ...props }) {
   return (
     <header {...props}>
       <div className="flex flex-row md:flex-col justify-between items-center w-full mx-auto md:gap-10 md:px-5 max-w-7xl">
-        <div className="flex items-center"> 
+        <div className="flex items-center">
           <Link to="/">
             <Img src="images/logo.jpg" alt="logo_one" className="h-[40px]" />
           </Link>
@@ -77,11 +77,12 @@ export default function Header({ isLoggedIn, handleLogout, ...props }) {
                 </Text>
               </>
             ) : (
-              <Text as="p" className="text-gray-900 font-medium">
+              <>
+                <Img src="images/img_profile_24_outline.svg" alt="profiletwentyfo" className="h-[30px] w-[30px] ml-6" />
                 <Link to='/login'>
                   Login
                 </Link>
-              </Text>
+              </>
             )}
           </div>
         </div>
